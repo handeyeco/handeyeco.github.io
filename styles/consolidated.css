@@ -63,6 +63,10 @@ html, body {
 	top: 0em;
 }
 
+.nav-icon {
+	font-size: 1.25em;
+}
+
 #about, #skills {
 	background-color: #e3e3e3;
 }
