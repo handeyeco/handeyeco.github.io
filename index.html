@@ -431,27 +431,8 @@
 			</div>
 		</div>
 
-	<!-- Load jQuery -->
+		<!-- Load JavaScript files -->
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-	<script>
-		$(document).ready(function() {
-			//Stick nav bar
-			var navBar = $("#navigation");
-			var navClass = "navigation-stick";
-			var pos = navBar.position();      
-
-			$(window).scroll(function() {
-    			var windowpos = $(window).scrollTop();
-    			if (windowpos >= pos.top) {
-        			navBar.addClass(navClass);
-    			} else {
-        			navBar.removeClass(navClass); 
-    			}
-			});
-			//End stick nav bar
-		});
-  	</script>
-
+  	<script src="scripts/main.js"></script>
 	</body>
 </html>
