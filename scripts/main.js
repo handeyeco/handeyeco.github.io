@@ -21,19 +21,4 @@ $(document).ready(function() {
     });
 	});
 
-	//Show job details to mobile
-	//Needs to be adjusted so accordian only works for mobile
-	/*$(".job-listing").click(function () {
-		if ($(this).hasClass("active")) {
-			$(this).find(".hide-mobile").slideToggle(500);
-			$(this).removeClass("active");
-		} else {
-			$(".job-listing").removeClass("active");
-			$(".job-listing .hide-mobile").slideUp(500);
-			$(this).find(".hide-mobile").slideToggle(500);
-			$(this).addClass("active");
-		}
-	});*/
-
-
 });
