@@ -7,21 +7,21 @@ Mobile-First Design
 *****************/
 
 html, body {
-	margin: 0em;
-	padding: 0em;
+	margin: 0;
+	padding: 0;
 	background-color: #f2f2f2;
 	font-family: 'Quicksand', Arial, Helvetica, sans-serif;
 	-webkit-text-size-adjust: 100%;
 }
 
 #global-container {
-	margin: 0em;
-	padding: 0em;
+	margin: 0;
+	padding: 0;
 }
 
-#top, #about, #resume, #skills, #contact {
+#top, #about, #resume, #portfolio, #skills, #contact {
 	width: 100%;
-	margin: 0em;
+	margin: 0;
 	text-align: left;
 }
 
@@ -62,24 +62,24 @@ html, body {
 
 .navigation-stick {
 	position: fixed;
-	top: 0em;
+	top: 0;
 }
 
 .nav-icon {
 	font-size: 1.25em;
 }
 
-#about, #skills {
+section:nth-child(odd) {
 	background-color: #e3e3e3;
 }
 
-#resume, #contact {
+section:nth-child(even) {
 	background-color: #f2f2f2;
 }
 
 #top h1 {
-	margin: 0em;
-	padding: 0em;
+	margin: 0;
+	padding: 0;
 	font-family: 'Stalemate', "Times New Roman", Times, serif;
 	font-size: 8em;
 	font-weight: normal;
@@ -90,28 +90,28 @@ h1, h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0em;
+	margin: 0;
 }
 
 .job-title {
-	margin-top: 0px;
+	margin-top: 0;
 	font-weight: bold;
 }
 
 .sub-title {
 	font-size: 3em;
-	margin: 0em;
+	margin: 0;
 }
 
 .slide-container {
-	padding: 3em 0em;
+	padding: 3em 0;
 	width: 100%;
 	margin: auto;
 }
 
 .slide-title {
 	font-size: 3em;
-	margin: 0em 0em 1em 0em;
+	margin: 0 0 1em 0;
 	text-align: center;
 }
 
@@ -141,13 +141,13 @@ a:visited, a:link, a:hover, a:active {
 	max-width: 250px;
 	max-height: 250px;
 	height: 100%;
-	border: .5em solid white;
+	border: 0.5em solid white;
 	border-radius: 50%;
 }
 
 /****************
 *****************
-Expanding Layout 
+Expanding Layout
 *****************
 *****************/
 
@@ -193,7 +193,7 @@ Expanding Layout
 
 /* **************
 *****************
-Grid Structure 
+Grid Structure
 *****************
 *****************/
 
