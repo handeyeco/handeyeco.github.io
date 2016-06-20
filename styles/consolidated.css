@@ -34,6 +34,10 @@ html, body {
 	text-align: center;
 }
 
+#contact {
+	background-color: #e3e3e3;
+}
+
 #navigation-wrapper {
 	height: 48px;
 }
