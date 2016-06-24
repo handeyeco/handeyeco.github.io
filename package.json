@@ -1,0 +1,26 @@
+{
+  "name": "Resume_3",
+  "version": "1.0.0",
+  "description": "Recently updated resume to make it a little more modern and mobile friendly.",
+  "main": "index.js",
+  "scripts": {
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-css": "node-sass --include-path scss src/main.scss styles/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewbryancurtis/updated_resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewbryancurtis/updated_resume/issues"
+  },
+  "homepage": "https://github.com/matthewbryancurtis/updated_resume#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  }
+}

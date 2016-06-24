@@ -1,0 +1,88 @@
+$slide-bg-odd: #E3E3E3;
+$slide-bg-even: #F2F2F2;
+$font-color: black;
+$accent-color: #266a2e;
+$main-font: 'Quicksand', Arial, Helvetica, sans-serif;
+$fancy-font: 'Stalemate', "Times New Roman", Times, serif;
+body {
+    font: {
+        family: $main-font;
+        size: 16px;
+    }
+}
+h1,
+h2 {
+    text-align: center;
+}
+h2 {
+    margin: 0 0 1em 0;
+    font-size: 3em;
+}
+h3 {
+    margin: 1em 0 1.5em 0;
+    font-size: 1.5em;
+}
+h4, .job-title {
+  margin: 0 0 1em 0;
+}
+a:active,
+a:hover,
+a:link,
+a:visited {
+    color: $font-color;
+    text-decoration: none;
+}
+header {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background-image: url("../images/header-wood.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    h1 {
+        font: {
+            family: $fancy-font;
+            size: 8em;
+        }
+    }
+}
+.navbar {
+    margin: 0;
+    color: black;
+    background-color: white;
+    border-radius: 0;
+    border: 0;
+}
+section:nth-child(odd) {
+    background-color: $slide-bg-odd;
+}
+section:nth-child(even) {
+    background-color: $slide-bg-even;
+}
+section {
+    padding: 3em 0;
+}
+.about-col {
+  margin-top: 2em;
+}
+.slide-container {
+    width: 100%;
+    max-width: 60em;
+    margin: auto;
+}
+.resume-row {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid $slide-bg-odd;
+}
+img.selfie {
+    border: 0.5em solid white;
+    border-radius: 50%;
+    max-width: 250px;
+    max-height: 250px;
+}
+.accent-color {
+    color: $accent-color;
+}
