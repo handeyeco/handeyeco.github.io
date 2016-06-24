@@ -38,26 +38,36 @@
 		</hgroup>
 	</header>
 
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+	<div class="nav-wrapper">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="#about"><span class="hide-mobile">About</span></a></li>
+						<li>
+							<a href="#skills"> <span class="hide-mobile">Skills</span> </a>
+						</li>
+						<li>
+							<a href="#portfolio"> <span class="hide-mobile">Portfolio</span> </a>
+						</li>
+						<li>
+							<a href="#resume"> <span class="hide-mobile">Resume</span> </a>
+						</li>
+						<li>
+							<a href="#contact"> <span class="hide-mobile">Contact</span> </a>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li><a href="#about"><span class="hide-mobile">About</span></a></li>
-					<li> <a href="#skills"> <span class="hide-mobile">Skills</span> </a> </li>
-					<li> <a href="#portfolio"> <span class="hide-mobile">Portfolio</span> </a> </li>
-					<li> <a href="#resume"> <span class="hide-mobile">Resume</span> </a> </li>
-					<li> <a href="#contact"> <span class="hide-mobile">Contact</span> </a> </li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+		</nav>
+	</div>
 
 	<section id="about">
 		<div class="slide-container">
@@ -241,46 +251,115 @@
 			<!-- Start grid -->
 			<div class="container-fluid">
 				<div class="row">
-					<a href="http://bob.matthewbryancurtis.com">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/bobross.png" />
-							<h3>Robo Bob Ross</h3>
-						</div>
-					</a>
-					<a href="http://weather.matthewbryancurtis.com">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/weather.png" />
-							<h3>Depressing Weather</h3>
-						</div>
-					</a>
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="http://bob.matthewbryancurtis.com">
+								<img src="images/portfolio/bobross.png" />
+								<figcaption>
+									<ul>
+										<li>JavaScript</li>
+										<li>HTML5</li>
+										<li>CSS3</li>
+										<li>jQuery</li>
+										<li>Twitter API</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>Robo Bob Ross</h3>
+					</div>
+
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="http://weather.matthewbryancurtis.com">
+								<img src="images/portfolio/weather.png" />
+								<figcaption>
+									<ul>
+										<li>JavaScript</li>
+										<li>jQuery</li>
+										<li>Twitter API</li>
+										<li>OWM API</li>
+										<li>IP API</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>Depressing Weather</h3>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="http://wikipedia.matthewbryancurtis.com">
+								<img src="images/portfolio/wikipedia.png" />
+								<figcaption>
+									<ul>
+										<li>JavaScript</li>
+										<li>HTML5</li>
+										<li>CSS3</li>
+										<li>Sass</li>
+										<li>Wikipedia API</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>Explore Wikipedia</h3>
+					</div>
+
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="http://buttercup.matthewbryancurtis.com">
+								<img src="images/portfolio/buttercup.png" />
+								<figcaption>
+									<ul>
+										<li>JavaScript</li>
+										<li>HTML5</li>
+										<li>CSS3</li>
+										<li>jQuery</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>Buttercup Festival Viewer</h3>
+					</div>
 				</div>
 				<div class="row">
-					<a href="http://wikipedia.matthewbryancurtis.com">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/wikipedia.png" />
-							<h3>Explore Wikipedia</h3>
-						</div>
-					</a>
-					<a href="http://buttercup.matthewbryancurtis.com">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/buttercup.png" />
-							<h3>Buttercup Festival Viewer</h3>
-						</div>
-					</a>
-				</div>
-				<div class="row">
-					<a href="">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/mbpc.png" />
-							<h3>Matthew Bryan Curtis</h3>
-						</div>
-					</a>
-					<a href="http://intheairmusic.com">
-						<div class="col-sm-6 text-center">
-							<img src="images/portfolio/itam.png" />
-							<h3>In The Air Music</h3>
-						</div>
-					</a>
+
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="javascript:;">
+								<img src="images/portfolio/mbpc.png" />
+								<figcaption>
+									<ul>
+										<li>HTML5</li>
+										<li>CSS3</li>
+										<li>jQuery</li>
+										<li>Sass</li>
+										<li>Bootstrap</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>Matthew Bryan Curtis</h3>
+					</div>
+
+					<div class="col-sm-6 text-center">
+						<figure class="hover-text">
+							<a href="http://intheairmusic.com">
+								<img src="images/portfolio/itam.png" />
+								<figcaption>
+									<ul>
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>jQuery</li>
+									</ul>
+								</figcaption>
+							</a>
+						</figure>
+						<h3>In The Air Music</h3>
+					</div>
+
 				</div>
 			</div>
 			<!-- End grid -->

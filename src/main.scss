@@ -1,7 +1,7 @@
 $slide-bg-odd: #E3E3E3;
 $slide-bg-even: #F2F2F2;
 $font-color: black;
-$accent-color: #266a2e;
+$accent-color: #2B5E79;
 $main-font: 'Quicksand', Arial, Helvetica, sans-serif;
 $fancy-font: 'Stalemate', "Times New Roman", Times, serif;
 body {
@@ -15,15 +15,16 @@ h2 {
     text-align: center;
 }
 h2 {
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     font-size: 3em;
 }
 h3 {
-    margin: 1em 0 1.5em 0;
+    margin: 1em 0 1.5em;
     font-size: 1.5em;
 }
-h4, .job-title {
-  margin: 0 0 1em 0;
+.job-title,
+h4 {
+    margin: 0 0 1em;
 }
 a:active,
 a:hover,
@@ -65,7 +66,7 @@ section {
     padding: 3em 0;
 }
 .about-col {
-  margin-top: 2em;
+    margin-top: 2em;
 }
 .slide-container {
     width: 100%;
@@ -73,9 +74,9 @@ section {
     margin: auto;
 }
 .resume-row {
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
-  border-bottom: 1px solid $slide-bg-odd;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid $slide-bg-odd;
 }
 img.selfie {
     border: 0.5em solid white;
@@ -85,4 +86,59 @@ img.selfie {
 }
 .accent-color {
     color: $accent-color;
+}
+/****************/
+//  NAV  STICK  //
+/****************/
+.nav-wrapper {
+  height: 1em;
+}
+.navbar {
+  width: 100%;
+  z-index: 1000;
+}
+.navigation-stick {
+    position: fixed;
+    top: 0;
+}
+/****************/
+// HOVER EFFECT //
+/****************/
+.hover-text li,
+.hover-text ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.5em;
+    line-height: normal;
+}
+.hover-text {
+    position: relative;
+    display: inline-block;
+    background-color: $accent-color;
+    overflow: hidden;
+}
+.hover-text img {
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.hover-text figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 200%;
+}
+.hover-text a:active,
+.hover-text a:hover,
+.hover-text a:link,
+.hover-text a:visited {
+    color: white;
+}
+.hover-text:hover img {
+    opacity: 0;
+}
+.hover-text:hover figcaption {
+    padding: 0;
 }
