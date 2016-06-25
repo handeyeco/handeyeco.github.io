@@ -10,10 +10,12 @@ body {
         size: 16px;
     }
 }
+.sub-title,
 h1,
 h2 {
     text-align: center;
 }
+.sub-title,
 h2 {
     margin: 0 0 1em;
     font-size: 3em;
@@ -38,7 +40,7 @@ header {
     width: 100vw;
     height: 100vh;
     padding-top: 20vh;
-    background-image: url("../images/header-wood.jpg");
+    background-image: url("../images/header-wood-min.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
