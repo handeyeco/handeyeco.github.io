@@ -23,7 +23,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Stalemate' rel='stylesheet' type='text/css'>
 
 	<!-- And Font Awesome Icons -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 	<!-- Load Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
@@ -50,19 +50,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="#about"><span class="hide-mobile">About</span></a></li>
-						<li>
-							<a href="#skills"> <span class="hide-mobile">Skills</span> </a>
-						</li>
-						<li>
-							<a href="#portfolio"> <span class="hide-mobile">Portfolio</span> </a>
-						</li>
-						<li>
-							<a href="#resume"> <span class="hide-mobile">Resume</span> </a>
-						</li>
-						<li>
-							<a href="#contact"> <span class="hide-mobile">Contact</span> </a>
-						</li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -76,7 +68,7 @@
 			<!-- Start grid -->
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-4 about-col">
+					<div class="col-sm-4 about-col hide-margin">
 						I'm a JavaScript enthusiast and aspiring Developer looking for opportunities in Portland, OR. My background is in Audio Engineering and Network Administration, so I handle technology and stress really well.
 					</div>
 					<div class="col-sm-4 text-center v-center">
@@ -90,11 +82,17 @@
 							<br>
 							<a href="tel:+19033166086">903.316.6086</a></p>
 
-						<p>
-							<a href="http://blog.matthewbryancurtis.com/">Blog</a> |
-							<a href="https://github.com/matthewbryancurtis" target="_blank">GitHub</a> |
-							<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">LinkedIn</a>
-						</p>
+						<ul class="contact-links">
+							<a href="http://blog.matthewbryancurtis.com/">
+								<li>Blog</li>
+							</a>
+							<a href="https://github.com/matthewbryancurtis" target="_blank">
+								<li>GitHub</li>
+							</a>
+							<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">
+								<li>LinkedIn</li>
+							</a>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -111,7 +109,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
-						<h3>Computers</h3>
+						<h3 class="hide-margin">Computers</h3>
 					</div>
 				</div>
 				<div class="row">
@@ -373,7 +371,7 @@
 
 			<!-- Start grid -->
 			<div class="container-fluid">
-				<h3>Select Work Experience</h3>
+				<h3 class="hide-margin">Select Work Experience</h3>
 				<a href="http://www.intheairmusic.com" target="_blank">
 					<div class="row resume-row">
 						<div class="col-sm-4">
@@ -535,9 +533,17 @@
 						<p><a href="mailto:matthew@matthewbryancurtis.com">matthew@matthewbryancurtis.com</a>
 							<br>
 							<a href="tel:+19033166086">903.316.6086</a></p>
-						<p><a href="http://blog.matthewbryancurtis.com/">Blog</a> |
-							<a href="https://github.com/matthewbryancurtis" target="_blank">GitHub</a> |
-							<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">LinkedIn</a></p>
+							<ul class="contact-links">
+								<a href="http://blog.matthewbryancurtis.com/">
+									<li>Blog</li>
+								</a>
+								<a href="https://github.com/matthewbryancurtis" target="_blank">
+									<li>GitHub</li>
+								</a>
+								<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">
+									<li>LinkedIn</li>
+								</a>
+							</ul>
 					</div>
 					<div class="col-sm-6">
 						<p class="hide-mobile">Feel free to say hello. I'm currently looking for work in the Portland, OR area but, even if you don't have a job for me, I'm always interested in meeting people who run things, make things, or do things.</p>

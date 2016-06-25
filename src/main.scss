@@ -32,6 +32,7 @@ a:link,
 a:visited {
     color: $font-color;
     text-decoration: none;
+    outline: 0;
 }
 header {
     width: 100vw;
@@ -56,6 +57,10 @@ header {
     border-radius: 0;
     border: 0;
 }
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: white;
+}
 section:nth-child(odd) {
     background-color: $slide-bg-odd;
 }
@@ -66,7 +71,17 @@ section {
     padding: 3em 0;
 }
 .about-col {
-    margin-top: 2em;
+    margin: 2em 0 1.5em;
+}
+.contact-links {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        color: $accent-color;
+        padding: 1em 0;
+        width: 30%;
+        display: inline-block;
+    }
 }
 .slide-container {
     width: 100%;
@@ -91,11 +106,11 @@ img.selfie {
 //  NAV  STICK  //
 /****************/
 .nav-wrapper {
-  height: 1em;
+    height: 1em;
 }
 .navbar {
-  width: 100%;
-  z-index: 1000;
+    width: 100%;
+    z-index: 1000;
 }
 .navigation-stick {
     position: fixed;
@@ -141,4 +156,23 @@ img.selfie {
 }
 .hover-text:hover figcaption {
     padding: 0;
+}
+/****************/
+//  RESPONSIVE  //
+/****************/
+@media only screen and (max-width: 544px) {
+    .hide-mobile {
+        display: none;
+    }
+    .hide-margin {
+        margin-top: 0;
+    }
+    .contact-links {
+        padding-top: 1em;
+        text-align: center;
+        li {
+            color: white;
+            background-color: $accent-color;
+        }
+    }
 }
