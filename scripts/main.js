@@ -1,28 +1,35 @@
-$(document).ready(function() {
-    var $win = $(window);
+$(function() {
+  var $win = $(window);
 
-    //Stick navigation
-    $win.scroll(function() {
-        if ($win.scrollTop() >= $win.height()) {
-            $("nav").addClass("navigation-stick");
-        } else {
-            $("nav").removeClass("navigation-stick");
-        }
-    });
+  //Fade in splash image
+  var splashImage = new Image();
+  splashImage.src = "http://matthewbryancurtis.com/images/header-wood-min.jpg";
+  $(splashImage).load(function() {
+    $('.splashBackground').fadeIn('fast');
+  });
 
-    //Slide nav links to anchor
-    $("nav a[href^='#']").click(function(e) {
-        e.preventDefault();
+  //Stick navigation
+  $win.scroll(function() {
+    if ($win.scrollTop() >= $win.height()) {
+      $("nav").addClass("navigation-stick");
+    } else {
+      $("nav").removeClass("navigation-stick");
+    }
+  });
 
-        $("html, body").stop().animate({
-            "scrollTop": $(this.hash).offset().top
-        }, 900, "swing");
-    });
+  //Slide nav links to anchor
+  $("nav a[href^='#']").click(function(e) {
+    e.preventDefault();
 
-    //Hide nav on click
-    $('.nav a').on('click', function(){
-        if($('.navbar-toggle').css('display') != 'none') {
-            $(".navbar-toggle").trigger( "click" );
-        }
-    });
+    $("html, body").stop().animate({
+      "scrollTop": $(this.hash).offset().top
+    }, 900, "swing");
+  });
+
+  //Hide nav on click
+  $('.nav a').click(function() {
+    if ($('.navbar-toggle').css('display') != 'none') {
+      $(".navbar-toggle").trigger("click");
+    }
+  });
 });

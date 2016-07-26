@@ -11,7 +11,58 @@ Also using these very beautiful fonts:
 * Quicksand
 * Stalemate
 
+## Todo
+
+* Setup autoprefixer
+* Lazy load images
+
 ## Commits
+
+### July 26, 2016 11:25AM
+
+Updated site to fade in splash/header image when loaded. Note the JS doesn't actually do anything with the image it's downloading.
+
+```javascript
+//Create an image and download splash
+var splashImage = new Image();
+splashImage.src = "http://matthewbryancurtis.com/images/header-wood-min.jpg";
+
+//When splash image loaded, fade in background div
+$(splashImage).load(function() {
+  $('.splashBackground').fadeIn('fast');
+});
+```
+
+Instead of assigning the header a background, I create a new div layered underneath the title. The div is faded in when the image loads.
+
+```html
+<header>
+  <div class="splashBackground">
+  </div>
+
+  <h1>Matthew Curtis</h1>
+  <p class="sub-title hide-mobile">Developer</p>
+</header>
+```
+
+That div is originally hidden. Thinking about removing the background here and assigning it in JS, but on the fence about it.
+
+```css
+.splashBackground {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -9999;
+  background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+```
 
 ### July 26, 2016 9:28AM
 

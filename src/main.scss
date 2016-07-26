@@ -40,11 +40,21 @@ header {
     width: 100vw;
     height: 100vh;
     padding-top: 20vh;
-    background-image: url("../images/header-wood-min.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+    .splashBackground {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -9999;
+      background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
     h1 {
         font: {
             family: $fancy-font;
