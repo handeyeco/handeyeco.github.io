@@ -18,6 +18,23 @@ Also using these very beautiful fonts:
 
 ## Commits
 
+### July 26, 2016 12:49AM
+
+Safari on iOS had a little problem using `100%` inside of `100vh` resulting in a faux margin.
+
+Updated to:
+
+```css
+.splashBackground {
+  ...
+  height: 100vh;
+  width: 100vw;
+  ...
+}
+```
+
+Seems to be working on all of my Apple crap. Who could say what's happening in Windows?
+
 ### July 26, 2016 11:25AM
 
 Updated site to fade in splash/header image when loaded. Note the JS doesn't actually do anything with the image it's downloading.
