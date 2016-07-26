@@ -1,5 +1,4 @@
-# _Matthew Bryan Curtis_ - Resume
-
+# Matthew Bryan Curtis - _Resume_
 It's my resume. Built with:
 
 * Bootstrap
@@ -13,6 +12,30 @@ Also using these very beautiful fonts:
 * Stalemate
 
 ## Commits
+
+### July 26, 2016 9:28AM
+
+Changing
+
+```javascript
+$('.nav a').on('click', function(){
+  $(".navbar-toggle").trigger( "click" );
+});
+```
+
+to
+
+```javascript
+$('.nav a').on('click', function(){
+    if($('.navbar-toggle').css('display') != 'none') {
+        $(".navbar-toggle").trigger( "click" );
+    }
+});
+```
+
+fixed `nav` glitch by adding a conditional that checks if `navbar` is operating in a collapsed state.
+
+[Thanks StackOverflow](http://stackoverflow.com/questions/16680543/hide-twitter-bootstrap-nav-collapse-on-click)
 
 ### July 26, 2016 9:17AM
 
