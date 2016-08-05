@@ -50,9 +50,6 @@ header {
       width: 100vw;
       z-index: -9999;
       background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
       background-size: cover;
     }
     h1 {
@@ -65,7 +62,7 @@ header {
 .navbar {
     margin: 0;
     color: black;
-    background-color: white;
+    background: white;
     border-radius: 0;
     border: 0;
 }
@@ -115,7 +112,7 @@ img.selfie {
     color: $accent-color;
 }
 /****************/
-//  NAV  STICK  //
+/*  NAV  STICK  //*/
 /****************/
 .nav-wrapper {
     height: 1em;
@@ -129,7 +126,7 @@ img.selfie {
     top: 0;
 }
 /****************/
-// HOVER EFFECT //
+/* HOVER EFFECT //*/
 /****************/
 .hover-text li,
 .hover-text ul {
@@ -170,7 +167,7 @@ img.selfie {
     padding: 0;
 }
 /****************/
-//  RESPONSIVE  //
+/*  RESPONSIVE  //*/
 /****************/
 @media only screen and (max-width: 544px) {
     .hide-mobile {
