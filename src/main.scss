@@ -6,7 +6,7 @@ $main-font: 'Quicksand', Arial, Helvetica, sans-serif;
 $fancy-font: 'Stalemate', "Times New Roman", Times, serif;
 body {
   background-color: $slide-bg-even;
-  
+
     font: {
         family: $main-font;
         size: 16px;
@@ -59,8 +59,7 @@ header {
       }
     }
 
-    .splashBackground {
-      display: none;
+    .splashBackground, .noscript-bg {
       position: absolute;
       top: 0;
       left: 0;
@@ -69,6 +68,10 @@ header {
       z-index: -9999;
       background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
       background-size: cover;
+    }
+
+    .splashBackground {
+      display: none;
     }
 
     h1 {

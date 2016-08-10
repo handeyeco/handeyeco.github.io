@@ -45,8 +45,7 @@ header {
     header .noscript a {
       text-decoration: underline;
       color: white; }
-  header .splashBackground {
-    display: none;
+  header .splashBackground, header .noscript-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,6 +54,8 @@ header {
     z-index: -9999;
     background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
     background-size: cover; }
+  header .splashBackground {
+    display: none; }
   header h1 {
     font-family: "Stalemate", "Times New Roman", Times, serif;
     font-size: 8em; }
