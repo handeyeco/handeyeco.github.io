@@ -1,4 +1,5 @@
 body {
+  background-color: #F2F2F2;
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
   font-size: 16px; }
 
@@ -32,6 +33,18 @@ header {
   width: 100vw;
   height: 100vh;
   padding-top: 20vh; }
+  header .noscript {
+    position: absolute;
+    padding: 1em 1.5em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 2em;
+    background-color: #2B5E79;
+    color: white;
+    animation: 2s noscript; }
+    header .noscript a {
+      text-decoration: underline;
+      color: white; }
   header .splashBackground {
     display: none;
     position: absolute;
@@ -98,7 +111,16 @@ img.selfie {
   color: #2B5E79; }
 
 /****************/
-/*  NAV  STICK  //*/
+/*  ANIMATIONS  */
+/****************/
+@keyframes noscript {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
+/****************/
+/*  NAV  STICK  */
 /****************/
 .nav-wrapper {
   height: 1em; }

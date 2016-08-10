@@ -5,6 +5,8 @@ $accent-color: #2B5E79;
 $main-font: 'Quicksand', Arial, Helvetica, sans-serif;
 $fancy-font: 'Stalemate', "Times New Roman", Times, serif;
 body {
+  background-color: $slide-bg-even;
+  
     font: {
         family: $main-font;
         size: 16px;
@@ -41,6 +43,22 @@ header {
     height: 100vh;
     padding-top: 20vh;
 
+    .noscript {
+      position: absolute;
+      padding: 1em 1.5em;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      top: 2em;
+      background-color: $accent-color;
+      color: white;
+      animation: 2s noscript;
+
+      a {
+        text-decoration: underline;
+        color: white;
+      }
+    }
+
     .splashBackground {
       display: none;
       position: absolute;
@@ -52,6 +70,7 @@ header {
       background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
       background-size: cover;
     }
+
     h1 {
         font: {
             family: $fancy-font;
@@ -112,7 +131,20 @@ img.selfie {
     color: $accent-color;
 }
 /****************/
-/*  NAV  STICK  //*/
+/*  ANIMATIONS  */
+/****************/
+@keyframes noscript {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+/****************/
+/*  NAV  STICK  */
 /****************/
 .nav-wrapper {
     height: 1em;
