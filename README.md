@@ -16,7 +16,7 @@ Also using these very beautiful fonts:
 * Setup autoprefixer
 * Lazy load images
 
-## Commits
+## Notes
 
 ### July 26, 2016 12:49AM
 
