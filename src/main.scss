@@ -29,6 +29,7 @@ h3 {
 .job-title,
 h4 {
     margin: 0 0 1em;
+    font-size: 1em;
 }
 a:active,
 a:hover,
@@ -219,4 +220,44 @@ img.selfie {
             background-color: $accent-color;
         }
     }
+}
+
+@media only screen and (min-width: 1400px) {
+  body {
+    font: {
+      size: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  body {
+    font: {
+      size: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  body {
+    font: {
+      size: 24px;
+    }
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  body {
+    font: {
+      size: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  body {
+    font: {
+      size: 40px;
+    }
+  }
 }

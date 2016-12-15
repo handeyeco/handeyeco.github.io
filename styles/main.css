@@ -19,7 +19,8 @@ h3 {
 
 .job-title,
 h4 {
-  margin: 0 0 1em; }
+  margin: 0 0 1em;
+  font-size: 1em; }
 
 a:active,
 a:hover,
@@ -189,3 +190,23 @@ img.selfie {
     .contact-links li {
       color: white;
       background-color: #2B5E79; } }
+
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 1800px) {
+  body {
+    font-size: 24px; } }
+
+@media only screen and (min-width: 2200px) {
+  body {
+    font-size: 30px; } }
+
+@media only screen and (min-width: 3000px) {
+  body {
+    font-size: 40px; } }
