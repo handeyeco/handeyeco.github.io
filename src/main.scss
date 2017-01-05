@@ -128,8 +128,9 @@ section {
 img.selfie {
     border: 0.5em solid white;
     border-radius: 50%;
-    max-width: 250px;
-    max-height: 250px;
+    width: 75%;
+    // max-width: 250px;
+    // max-height: 250px;
 }
 .accent-color {
     color: $accent-color;
