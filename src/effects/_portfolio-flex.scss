@@ -1,0 +1,22 @@
+// Flexbox for square, hover-effected portfolio pieces
+// Allows them to wrap in twos
+.portfolio-outer-flex, .portfolio-inner-flex {
+  display: flex;
+}
+
+.portfolio-outer-flex {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-inner-flex {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 1500px) {
+  .portfolio-inner-flex {
+    width: 49.9%;
+  }
+}
