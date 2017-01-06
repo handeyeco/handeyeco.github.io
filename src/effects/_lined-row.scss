@@ -1,0 +1,12 @@
+.lined-row {
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+section:nth-child(odd) .lined-row {
+  border-bottom: 1px solid $slide-bg-even;
+}
+
+section:nth-child(even) .lined-row {
+  border-bottom: 1px solid $slide-bg-odd;
+}

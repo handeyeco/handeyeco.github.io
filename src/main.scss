@@ -26,11 +26,7 @@
     max-width: 60em;
     margin: auto;
 }
-.lined-row {
-    padding-bottom: 1.5em;
-    margin-bottom: 1.5em;
-    border-bottom: 1px solid $slide-bg-odd;
-}
+
 img.selfie {
     border: 0.5em solid white;
     border-radius: 50%;
@@ -41,7 +37,7 @@ img.selfie {
 .accent-color {
     color: $accent-color;
 }
-
+@import 'effects/lined-row';
 @import 'effects/portfolio-flex';
 @import 'effects/nav_stick';
 @import 'effects/animations';
