@@ -1,0 +1,38 @@
+.hover-text li,
+.hover-text ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 1.5em;
+    line-height: normal;
+}
+.hover-text {
+    position: relative;
+    display: inline-block;
+    background-color: $accent-color;
+    overflow: hidden;
+}
+.hover-text img {
+    opacity: 1;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.hover-text figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 200%;
+}
+.hover-text a:active,
+.hover-text a:hover,
+.hover-text a:link,
+.hover-text a:visited {
+    color: white;
+}
+.hover-text:hover img {
+    opacity: 0;
+}
+.hover-text:hover figcaption {
+    padding: 0;
+}

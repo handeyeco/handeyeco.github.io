@@ -1,107 +1,13 @@
-$slide-bg-odd: #E3E3E3;
-$slide-bg-even: #F2F2F2;
-$font-color: black;
-$accent-color: #2B5E79;
-$main-font: 'Quicksand', Arial, Helvetica, sans-serif;
-$fancy-font: 'Stalemate', "Times New Roman", Times, serif;
-body {
-  background-color: $slide-bg-even;
+@import 'variables';
 
-    font: {
-        family: $main-font;
-        size: 16px;
-    }
-}
-.sub-title,
-h1,
-h2 {
-    text-align: center;
-}
-.sub-title,
-h2 {
-    margin: 0 0 1em;
-    font-size: 3em;
-}
-h3 {
-    margin: 1em 0 1.5em;
-    font-size: 1.5em;
-}
-.job-title,
-h4 {
-    margin: 0 0 1em;
-    font-size: 1em;
-}
-a:active,
-a:hover,
-a:link,
-a:visited {
-    color: $font-color;
-    text-decoration: none;
-    outline: 0;
-}
-header {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 20vh;
+@import 'elements/body';
+@import 'elements/h';
+@import 'elements/a';
+@import 'elements/header';
+@import 'elements/navbar';
+@import 'elements/section';
 
-    .noscript {
-      position: absolute;
-      padding: 1em 1.5em;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      top: 2em;
-      background-color: $accent-color;
-      color: white;
-      animation: 2s noscript;
 
-      a {
-        text-decoration: underline;
-        color: white;
-      }
-    }
-
-    .splashBackground, .noscript-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      z-index: -9999;
-      background-image: url("http://matthewbryancurtis.com/images/header-wood-min.jpg");
-      background-size: cover;
-    }
-
-    .splashBackground {
-      display: none;
-    }
-
-    h1 {
-        font: {
-            family: $fancy-font;
-            size: 8em;
-        }
-    }
-}
-.navbar {
-    margin: 0;
-    color: black;
-    background: white;
-    border-radius: 0;
-    border: 0;
-}
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-    background-color: white;
-}
-section:nth-child(odd) {
-    background-color: $slide-bg-odd;
-}
-section:nth-child(even) {
-    background-color: $slide-bg-even;
-}
-section {
-    padding: 3em 0;
-}
 .about-col {
     margin: 2em 0 1.5em;
 }
@@ -120,7 +26,7 @@ section {
     max-width: 60em;
     margin: auto;
 }
-.resume-row {
+.lined-row {
     padding-bottom: 1.5em;
     margin-bottom: 1.5em;
     border-bottom: 1px solid $slide-bg-odd;
@@ -135,130 +41,9 @@ img.selfie {
 .accent-color {
     color: $accent-color;
 }
-/****************/
-/*  ANIMATIONS  */
-/****************/
-@keyframes noscript {
-  0% {
-    left: -100%;
-  }
 
-  100% {
-    left: 0;
-  }
-}
+@import 'effects/nav_stick';
+@import 'effects/animations';
+@import 'effects/hover_effect';
 
-/****************/
-/*  NAV  STICK  */
-/****************/
-.nav-wrapper {
-    height: 1em;
-}
-.navbar {
-    width: 100%;
-    z-index: 1000;
-}
-.navigation-stick {
-    position: fixed;
-    top: 0;
-}
-/****************/
-/* HOVER EFFECT //*/
-/****************/
-.hover-text li,
-.hover-text ul {
-    list-style-type: none;
-    padding-left: 10px;
-    margin-top: 10px;
-    text-align: left;
-    font-size: 1.5em;
-    line-height: normal;
-}
-.hover-text {
-    position: relative;
-    display: inline-block;
-    background-color: $accent-color;
-    overflow: hidden;
-}
-.hover-text img {
-    opacity: 1;
-    -webkit-transition: opacity 0.35s;
-    transition: opacity 0.35s;
-}
-.hover-text figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-left: 200%;
-}
-.hover-text a:active,
-.hover-text a:hover,
-.hover-text a:link,
-.hover-text a:visited {
-    color: white;
-}
-.hover-text:hover img {
-    opacity: 0;
-}
-.hover-text:hover figcaption {
-    padding: 0;
-}
-/****************/
-/*  RESPONSIVE  */
-/****************/
-@media only screen and (max-width: 544px) {
-    .hide-mobile {
-        display: none;
-    }
-    .hide-margin {
-        margin-top: 0;
-    }
-    .contact-links {
-        padding-top: 1em;
-        text-align: center;
-        li {
-            color: white;
-            background-color: $accent-color;
-        }
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-  body {
-    font: {
-      size: 20px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  body {
-    font: {
-      size: 20px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1800px) {
-  body {
-    font: {
-      size: 24px;
-    }
-  }
-}
-
-@media only screen and (min-width: 2200px) {
-  body {
-    font: {
-      size: 30px;
-    }
-  }
-}
-
-@media only screen and (min-width: 3000px) {
-  body {
-    font: {
-      size: 40px;
-    }
-  }
-}
+@import 'breakpoints';

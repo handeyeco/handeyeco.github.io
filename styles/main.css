@@ -72,6 +72,13 @@ header {
 .navbar-default .navbar-toggle:hover {
   background-color: white; }
 
+.navbar-default .navbar-nav > li > a {
+  color: #2B5E79; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #2B5E79; }
+
 section:nth-child(odd) {
   background-color: #E3E3E3; }
 
@@ -98,7 +105,7 @@ section {
   max-width: 60em;
   margin: auto; }
 
-.resume-row {
+.lined-row {
   padding-bottom: 1.5em;
   margin-bottom: 1.5em;
   border-bottom: 1px solid #E3E3E3; }
@@ -111,18 +118,6 @@ img.selfie {
 .accent-color {
   color: #2B5E79; }
 
-/****************/
-/*  ANIMATIONS  */
-/****************/
-@keyframes noscript {
-  0% {
-    left: -100%; }
-  100% {
-    left: 0; } }
-
-/****************/
-/*  NAV  STICK  */
-/****************/
 .nav-wrapper {
   height: 1em; }
 
@@ -134,9 +129,12 @@ img.selfie {
   position: fixed;
   top: 0; }
 
-/****************/
-/* HOVER EFFECT //*/
-/****************/
+@keyframes noscript {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
 .hover-text li,
 .hover-text ul {
   list-style-type: none;
@@ -175,9 +173,6 @@ img.selfie {
 .hover-text:hover figcaption {
   padding: 0; }
 
-/****************/
-/*  RESPONSIVE  */
-/****************/
 @media only screen and (max-width: 544px) {
   .hide-mobile {
     display: none; }

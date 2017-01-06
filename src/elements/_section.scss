@@ -1,0 +1,9 @@
+section:nth-child(odd) {
+    background-color: $slide-bg-odd;
+}
+section:nth-child(even) {
+    background-color: $slide-bg-even;
+}
+section {
+    padding: 3em 0;
+}

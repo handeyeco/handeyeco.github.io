@@ -1,0 +1,18 @@
+.navbar {
+    margin: 0;
+    color: black;
+    background: white;
+    border-radius: 0;
+    border: 0;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: white;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #2B5E79;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #2B5E79;
+}
