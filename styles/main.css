@@ -28,8 +28,7 @@ a:link,
 a:visited {
   color: #2B5E79;
   text-decoration: none;
-  outline: 0;
-  transition: color 1s; }
+  outline: 0; }
 
 header {
   width: 100vw;
