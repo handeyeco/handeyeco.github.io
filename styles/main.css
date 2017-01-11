@@ -91,15 +91,6 @@ section {
 .about-col {
   margin: 2em 0 1.5em; }
 
-.contact-links {
-  list-style-type: none;
-  padding-left: 0; }
-  .contact-links li {
-    color: #2B5E79;
-    padding: 1em 0;
-    width: 30%;
-    display: inline-block; }
-
 .slide-container {
   width: 100%;
   max-width: 60em;
@@ -112,6 +103,31 @@ img.selfie {
 
 .accent-color {
   color: #2B5E79; }
+
+.button-links {
+  display: flex;
+  justify-content: space-between;
+  text-align: center; }
+  .button-links a {
+    color: #2B5E79;
+    border: 2px solid #2B5E79;
+    padding: 0.5em 0;
+    margin: 0 1em;
+    width: 100%;
+    display: inline-block;
+    transition: color 0.5s, background 0.5s; }
+  .button-links a:first-child {
+    margin-left: 0; }
+  .button-links a:last-child {
+    margin-right: 0; }
+  .button-links a:hover {
+    background: #2B5E79;
+    color: white; }
+
+@media only screen and (max-width: 544px) {
+  .button-links a {
+    background: #2B5E79;
+    color: white; } }
 
 .lined-row {
   padding-bottom: 1.5em;
@@ -198,13 +214,7 @@ section:nth-child(even) .lined-row {
   .hide-mobile {
     display: none; }
   .hide-margin {
-    margin-top: 0; }
-  .contact-links {
-    padding-top: 1em;
-    text-align: center; }
-    .contact-links li {
-      color: white;
-      background-color: #2B5E79; } }
+    margin-top: 0; } }
 
 @media only screen and (min-width: 1400px) {
   body {

@@ -7,19 +7,8 @@
 @import 'elements/navbar';
 @import 'elements/section';
 
-
 .about-col {
     margin: 2em 0 1.5em;
-}
-.contact-links {
-    list-style-type: none;
-    padding-left: 0;
-    li {
-        color: $accent-color;
-        padding: 1em 0;
-        width: 30%;
-        display: inline-block;
-    }
 }
 .slide-container {
     width: 100%;
@@ -37,10 +26,12 @@ img.selfie {
 .accent-color {
     color: $accent-color;
 }
+
+@import 'effects/button-links';
 @import 'effects/lined-row';
 @import 'effects/portfolio-flex';
-@import 'effects/nav_stick';
+@import 'effects/nav-stick';
 @import 'effects/animations';
-@import 'effects/hover_effect';
+@import 'effects/hover-effect';
 
 @import 'breakpoints';
