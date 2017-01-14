@@ -91,9 +91,12 @@ function setDimensions() {
 }
 
 function initialize() {
+  var winHeight = window.innerHeight;
+  var navHeight = document.getElementById('nav-wrapper').scrollHeight;
+
   //Init canvas
   container.self = document.getElementById('canvas-container');
-  container.self.style.height = "100vh";
+  container.self.style.height = winHeight - navHeight + "px";
   container.self.style.width = "100vw";
   canvas.self = document.createElement('canvas');
   ctx = canvas.self.getContext('2d');
@@ -135,20 +138,17 @@ function initialize() {
 //Do this each frame
 function step() {
   tris.list.forEach((tri) => {
+    //Draw the trangles
+    ctx.beginPath();
+    ctx.moveTo(tri.x, tri.y);
+    ctx.lineTo(tri.a, tri.b);
+    ctx.lineTo(tri.m, tri.n);
+
     //If in manual mode
     if (manual) {
-      //If tri is on top
-      if (tri.even) {
-        //Determine if mouse is in square inside of triangle
-        //if so, activate it
-        if ((mouse.x > tri.x && mouse.x < tri.x + cubes.dimension / 2) && (mouse.y > tri.y && mouse.y < tri.y + cubes.dimension / 2)) {
-          tri.activate()
-        }
-      //Same thing for bottom tri
-      } else {
-        if ((mouse.x < tri.x && mouse.x > tri.x - cubes.dimension / 2) && (mouse.y < tri.y && mouse.y > tri.y - cubes.dimension / 2)) {
-          tri.activate();
-        }
+      //If mouse pointer is in triangle path activate
+      if (ctx.isPointInPath(mouse.x, mouse.y)) {
+        tri.activate()
       }
     }
     //If in auto mode
@@ -183,15 +183,10 @@ function step() {
         ctx.fillStyle = `rgba(43,94,121,${tri.opacity})`;
       }
 
-      //Draw the trangles
-      ctx.beginPath();
-      ctx.moveTo(tri.x, tri.y);
-      ctx.lineTo(tri.a, tri.b);
-      ctx.lineTo(tri.m, tri.n);
-      ctx.fill();
-
       //Start fading out
       tri.opacity -= 0.001;
+
+      ctx.fill();
     } else {
       //Set deactive tris to white so they don't pop up later
       ctx.fillStyle = 'white';

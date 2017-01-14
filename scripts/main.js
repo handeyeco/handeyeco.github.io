@@ -1,9 +1,10 @@
 $(function() {
   var $win = $(window);
+  var navHeight = document.getElementById('nav-wrapper').scrollHeight;
 
   //Stick navigation
   $win.scroll(function() {
-    if ($win.scrollTop() >= $win.height()) {
+    if ($win.scrollTop() >= $win.height() - navHeight) {
       $("nav").addClass("navigation-stick");
     } else {
       $("nav").removeClass("navigation-stick");
