@@ -1,13 +1,6 @@
 $(function() {
   var $win = $(window);
 
-  //Fade in splash image
-  var splashImage = new Image();
-  splashImage.src = "http://matthewbryancurtis.com/images/header-wood-min.jpg";
-  $(splashImage).load(function() {
-    $('.splashBackground').fadeIn('fast');
-  });
-
   //Stick navigation
   $win.scroll(function() {
     if ($win.scrollTop() >= $win.height()) {
@@ -17,8 +10,8 @@ $(function() {
     }
   });
 
-  //Slide nav links to anchor
-  $("nav a[href^='#']").click(function(e) {
+  //Slide internal links to anchor
+  $("a[href^='#']").click(function(e) {
     e.preventDefault();
 
     $("html, body").stop().animate({

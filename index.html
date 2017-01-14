@@ -26,13 +26,14 @@
 	<meta name="keywords" content="JavaScript, HTML5, CSS3, Developer, Front-End, React, Sass, Portland, Oregon, OR, Resume, CV" />
 	<meta name="robots" content="index, follow" />
 	<meta name="revisit-after" content="14 days" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
 	<!-- I put this here exclusively for Facebook -->
 	<meta property="og:title" content="Matthew Curtis | Developer" />
 	<meta property="og:url" content="http://www.matthewbryancurtis.com" />
 	<meta property="og:image" content="http://www.matthewbryancurtis.com/images/portfolio/mbpc-min.png" />
 	<meta property="og:site_name" content="Matthew Bryan Curtis" />
-	<meta property="og:description" content="Resume for JavaScript Enthusiast Matthew Bryan Curtis" />
+	<meta property="og:description" content="Resume for code Enthusiast Matthew Bryan Curtis" />
 
 
 	<!-- Load Bootstrap -->
@@ -52,20 +53,17 @@
 	<!-- Splash Page -->
 	<!--=============-->
 	<!--=============-->
-	<header>
-		<noscript>
-			<div class="noscript">This site is pretty cool with <a href="http://www.enable-javascript.com/" target="_blank">JavaScript</a>.</div>
+	<noscript>
+		<div class="noscript">This site is pretty cool with <a href="http://www.enable-javascript.com/" target="_blank">JavaScript</a>.</div>
+	</noscript>
 
-			<!-- Fallback for header image -->
-			<div class="noscript-bg"></div>
-		</noscript>
+	<div id="canvas-container" class="canvas-container">
 
-		<!-- Fade in background image with JS -->
-		<div class="splashBackground"></div>
-
-		<h1>Matthew Curtis</h1>
-		<p class="sub-title hide-mobile">Developer</p>
-	</header>
+		<div id="canvas-popup" class="canvas-popup">
+			<a href="#about"><h1>M<span style="display:none;">atthew Curtis</span></h1></a>
+			<div class="triangle"></div>
+		</div>
+	</div>
 
 	<!--============-->
 	<!--============-->
@@ -591,6 +589,7 @@
 
 	<!-- Load Custom JS -->
 	<script src="scripts/main.js"></script>
+	<script src="scripts/canvas-header.js"></script>
 </body>
 
 </html>

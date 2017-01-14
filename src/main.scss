@@ -3,7 +3,7 @@
 @import 'elements/body';
 @import 'elements/h';
 @import 'elements/a';
-@import 'elements/header';
+@import 'elements/noscript';
 @import 'elements/navbar';
 @import 'elements/section';
 
@@ -27,6 +27,7 @@ img.selfie {
     color: $accent-color;
 }
 
+@import 'effects/canvas-header';
 @import 'effects/button-links';
 @import 'effects/lined-row';
 @import 'effects/portfolio-flex';
