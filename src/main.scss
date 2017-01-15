@@ -16,12 +16,17 @@
     margin: auto;
 }
 
-img.selfie {
+.selfie {
     border: 0.5em solid white;
     border-radius: 50%;
     width: 75%;
     // max-width: 250px;
     // max-height: 250px;
+}
+.portfolio-img-lg {
+  width: 100%;
+  margin: auto;
+  display: block
 }
 .accent-color {
     color: $accent-color;

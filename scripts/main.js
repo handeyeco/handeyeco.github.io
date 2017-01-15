@@ -4,7 +4,7 @@ $(function() {
 
   //Stick navigation
   $win.scroll(function() {
-    if ($win.scrollTop() >= $win.height() - navHeight) {
+    if ($win.scrollTop() >= $win.height() - navHeight || !NotMobile()) {
       $("nav").addClass("navigation-stick");
     } else {
       $("nav").removeClass("navigation-stick");
@@ -27,3 +27,26 @@ $(function() {
     }
   });
 });
+
+function CanvasSupported(){
+  var elem = document.createElement('canvas');
+  return !!(elem.getContext && elem.getContext('2d'));
+}
+
+function ES6Supported(){
+  try {
+    new Function("(a = 0) => a");
+    return true;
+  }
+  catch (err) {
+    return false;
+  }
+};
+
+function NotMobile(){
+  if(window.innerWidth <= 1000 && window.innerHeight <= 1000) {
+     return false;
+   } else {
+     return true;
+   }
+}

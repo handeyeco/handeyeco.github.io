@@ -7,6 +7,11 @@
         margin-top: 0;
     }
 }
+@media only screen and (max-width: 1000px) {
+    .selfie, .portfolio-img-lg {
+      max-width: 300px;
+    }
+}
 @media only screen and (min-width: 1400px) {
     body {
         font: {

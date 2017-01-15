@@ -78,10 +78,15 @@ section {
   max-width: 60em;
   margin: auto; }
 
-img.selfie {
+.selfie {
   border: 0.5em solid white;
   border-radius: 50%;
   width: 75%; }
+
+.portfolio-img-lg {
+  width: 100%;
+  margin: auto;
+  display: block; }
 
 .accent-color {
   color: #2B5E79; }
@@ -238,6 +243,10 @@ section:nth-child(even) .lined-row {
     display: none; }
   .hide-margin {
     margin-top: 0; } }
+
+@media only screen and (max-width: 1000px) {
+  .selfie, .portfolio-img-lg {
+    max-width: 300px; } }
 
 @media only screen and (min-width: 1400px) {
   body {
