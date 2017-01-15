@@ -117,6 +117,8 @@ function initialize() {
     tris.list.push(new Tri(tris.count++, ...cubes.coord));
   }
 
+  container.self.appendChild(canvas.self);
+
   //Add mousemove to container
   container.self.addEventListener('mousemove', function(e) {
     if (!manual) {
@@ -127,12 +129,10 @@ function initialize() {
     }
 
     //Determine where mouse is
-    container.bounds = container.self.getBoundingClientRect();
-    mouse.x = e.clientX - container.bounds.left;
-    mouse.y = e.clientY - container.bounds.top;
+    canvas.bounds = canvas.self.getBoundingClientRect();
+    mouse.x = e.clientX - canvas.bounds.left;
+    mouse.y = e.clientY - canvas.bounds.top;
   });
-
-  container.self.appendChild(canvas.self);
 }
 
 //Do this each frame
