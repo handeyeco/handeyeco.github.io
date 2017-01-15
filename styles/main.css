@@ -91,6 +91,10 @@ img.selfie {
   overflow: hidden;
   position: relative; }
 
+canvas {
+  display: block;
+  margin: auto; }
+
 .canvas-popup {
   opacity: 0;
   color: white;

@@ -146,7 +146,7 @@ function step() {
 
     //If in manual mode
     if (manual) {
-      //If mouse pointer is in triangle path activate
+      //If mouse pointer is in triangle path activate tri
       if (ctx.isPointInPath(mouse.x, mouse.y)) {
         tri.activate()
       }
@@ -186,10 +186,12 @@ function step() {
       //Start fading out
       tri.opacity -= 0.001;
 
+      //Fill tri
       ctx.fill();
     } else {
       //Set deactive tris to white so they don't pop up later
       ctx.fillStyle = 'white';
+      //This needs to be here or tris don't fade properly
       ctx.fillRect(tri.x, tri.y, cubes.dimension, cubes.dimension);
     }
   });
