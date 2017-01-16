@@ -1,13 +1,14 @@
 $(function() {
   var $win = $(window);
-  var navHeight = document.getElementById('nav-wrapper').scrollHeight;
+  var $nav = $("nav");
+  var navHeight = $nav.height();
 
   //Stick navigation
   $win.scroll(function() {
     if ($win.scrollTop() >= $win.height() - navHeight || !NotMobile()) {
-      $("nav").addClass("navigation-stick");
+      $nav.addClass("navigation-stick");
     } else {
-      $("nav").removeClass("navigation-stick");
+      $nav.removeClass("navigation-stick");
     }
   });
 
@@ -16,7 +17,7 @@ $(function() {
     e.preventDefault();
 
     $("html, body").stop().animate({
-      "scrollTop": $(this.hash).offset().top - 20
+      "scrollTop": $(this.hash).offset().top - 15
     }, 900, "swing");
   });
 
