@@ -16,7 +16,7 @@ $(function() {
     e.preventDefault();
 
     $("html, body").stop().animate({
-      "scrollTop": $(this.hash).offset().top
+      "scrollTop": $(this.hash).offset().top - 20
     }, 900, "swing");
   });
 
