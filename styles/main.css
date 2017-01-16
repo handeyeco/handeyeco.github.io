@@ -35,7 +35,7 @@ a:visited {
   padding: 1em 1.5em;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  top: 2em;
+  top: 6em;
   background-color: #2B5E79;
   color: white;
   animation: 2s noscript; }
@@ -112,12 +112,12 @@ canvas {
 
 .triangle {
   border: 1px solid white;
-  width: 24rem;
-  height: 24rem;
+  width: 14em;
+  height: 14em;
   background: #2B5E79;
   position: absolute;
-  bottom: -12rem;
-  right: -12rem;
+  bottom: -7em;
+  right: -7em;
   transform: rotate(45deg);
   z-index: 0; }
 
