@@ -204,6 +204,7 @@ section:nth-child(even) .lined-row {
 .hover-text li,
 .hover-text ul {
   list-style-type: none;
+  font-weight: 300;
   padding-left: 10px;
   margin-top: 10px;
   text-align: left;
