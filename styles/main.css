@@ -245,9 +245,11 @@ section:nth-child(even) .lined-row {
   .hide-margin {
     margin-top: 0; } }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1030px) {
   .selfie, .portfolio-img-lg {
-    max-width: 300px; } }
+    max-width: 300px; }
+  .hide-tablet {
+    display: none; } }
 
 @media only screen and (min-width: 1400px) {
   body {

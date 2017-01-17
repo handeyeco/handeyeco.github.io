@@ -2,9 +2,11 @@
 It's my resume. Built with:
 
 * Bootstrap
-* jQuery
+* Canvas
+* Dash of ES6
 * Sass
 * Node/NPM
+* jQuery
 
 Also using these very beautiful fonts:
 

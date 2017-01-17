@@ -1,26 +1,3 @@
-function CanvasSupported(){
-  var elem = document.createElement('canvas');
-  return !!(elem.getContext && elem.getContext('2d'));
-}
-
-function ES6Supported(){
-  try {
-    new Function("(a = 0) => a");
-    return true;
-  }
-  catch (err) {
-    return false;
-  }
-};
-
-function NotMobile(){
-  if(window.innerWidth <= 1000 && window.innerHeight <= 1000) {
-     return false;
-   } else {
-     return true;
-   }
-}
-
 if (CanvasSupported() && ES6Supported() && NotMobile()){
 
 (function Glitch() {

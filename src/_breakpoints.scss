@@ -1,3 +1,4 @@
+// Phone portrait and below
 @media only screen and (max-width: 544px) {
     .hide-mobile {
         display: none;
@@ -7,11 +8,16 @@
         margin-top: 0;
     }
 }
-@media only screen and (max-width: 1000px) {
+// Tablet landscape and below
+@media only screen and (max-width: 1030px) {
     .selfie, .portfolio-img-lg {
       max-width: 300px;
     }
+    .hide-tablet {
+      display: none;
+    }
 }
+// 1400px+
 @media only screen and (min-width: 1400px) {
     body {
         font: {
@@ -19,6 +25,7 @@
         }
     }
 }
+// 1800px+
 @media only screen and (min-width: 1800px) {
     body {
         font: {
@@ -26,6 +33,7 @@
         }
     }
 }
+// 2200px+
 @media only screen and (min-width: 2200px) {
     body {
         font: {
@@ -33,6 +41,7 @@
         }
     }
 }
+// 3000px+
 @media only screen and (min-width: 3000px) {
     body {
         font: {
