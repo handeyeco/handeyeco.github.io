@@ -101,8 +101,6 @@ function initialize() {
     if (!manual) {
       //Change to manual mode when mouse moves
       manual = true;
-      var popup = document.getElementById('canvas-popup');
-      popup.style.opacity = "1";
     }
 
     //Determine where mouse is

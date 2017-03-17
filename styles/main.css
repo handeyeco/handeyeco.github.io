@@ -100,38 +100,6 @@ canvas {
   display: block;
   margin: auto; }
 
-.canvas-popup {
-  opacity: 0;
-  color: white;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: opacity 4s; }
-  .canvas-popup a {
-    color: white; }
-
-.triangle {
-  border: 1px solid white;
-  width: 14em;
-  height: 14em;
-  background: #2B5E79;
-  position: absolute;
-  bottom: -7em;
-  right: -7em;
-  transform: rotate(45deg);
-  z-index: 0; }
-
-h1 {
-  position: relative;
-  right: 2rem;
-  bottom: 1.75rem;
-  font-weight: normal;
-  margin: 0;
-  line-height: 0.75em;
-  z-index: 999999;
-  font-family: 'Stalemate', "Times New Roman", Times, serif;
-  font-size: 4em; }
-
 .button-links {
   display: flex;
   justify-content: space-between;
