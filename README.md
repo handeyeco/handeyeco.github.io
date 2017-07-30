@@ -19,7 +19,6 @@ Also using these very beautiful fonts:
 * Lazy load images
 * Resize canvas with window
 * Include modernizr or group feature checks
-* Use ES6 && Babel
 * Modularize and Minify JS
 * Remove jQuery
 * Remove Bootstrap?
