@@ -1,3 +1,7 @@
+.portfolio-highlight h3 {
+  margin-top: 0.5em;
+}
+
 // Flexbox for square, hover-effected portfolio pieces
 // Allows them to wrap in twos
 .portfolio-outer-flex, .portfolio-inner-flex {
@@ -18,5 +22,11 @@
 @media screen and (min-width: 1500px) {
   .portfolio-inner-flex {
     width: 49.9%;
+  }
+}
+
+@media only screen and (min-width: 544px) {
+  .portfolio-highlight:nth-child(even) h3 {
+    text-align: right;
   }
 }

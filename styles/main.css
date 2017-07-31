@@ -136,6 +136,9 @@ section:nth-child(odd) .lined-row {
 section:nth-child(even) .lined-row {
   border-bottom: 1px solid #E3E3E3; }
 
+.portfolio-highlight h3 {
+  margin-top: 0.5em; }
+
 .portfolio-outer-flex, .portfolio-inner-flex {
   display: flex; }
 
@@ -151,6 +154,10 @@ section:nth-child(even) .lined-row {
 @media screen and (min-width: 1500px) {
   .portfolio-inner-flex {
     width: 49.9%; } }
+
+@media only screen and (min-width: 544px) {
+  .portfolio-highlight:nth-child(even) h3 {
+    text-align: right; } }
 
 .nav-wrapper {
   height: 1em; }
