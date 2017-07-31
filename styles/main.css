@@ -14,7 +14,7 @@ h2 {
   font-size: 3em; }
 
 h3 {
-  margin: 1em 0 1.5em;
+  margin: 0 0 1.5em;
   font-size: 1.5em; }
 
 .job-title,
@@ -88,6 +88,10 @@ section {
   margin: auto;
   display: block; }
 
+.padded-row {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em; }
+
 .accent-color {
   color: #2B5E79; }
 
@@ -125,10 +129,6 @@ canvas {
   .button-links a {
     background: #2B5E79;
     color: white; } }
-
-.lined-row {
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em; }
 
 section:nth-child(odd) .lined-row {
   border-bottom: 1px solid #F2F2F2; }

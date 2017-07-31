@@ -10,6 +10,7 @@
 .about-col {
     margin: 2em 0 1.5em;
 }
+
 .slide-container {
     width: 100%;
     max-width: 60em;
@@ -23,11 +24,18 @@
     // max-width: 250px;
     // max-height: 250px;
 }
+
 .portfolio-img-lg {
   width: 100%;
   margin: auto;
   display: block
 }
+
+.padded-row {
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+}
+
 .accent-color {
     color: $accent-color;
 }
