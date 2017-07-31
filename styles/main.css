@@ -48,7 +48,8 @@ a:visited {
   color: black;
   background: white;
   border-radius: 0;
-  border: 0; }
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
@@ -116,14 +117,16 @@ canvas {
     margin: 0 1em;
     width: 100%;
     display: inline-block;
-    transition: color 0.5s, background 0.5s; }
+    box-shadow: 0 0 5px transparent;
+    transition: color 0.5s, background 0.5s, box-shadow 0.5s; }
   .button-links a:first-child {
     margin-left: 0; }
   .button-links a:last-child {
     margin-right: 0; }
   .button-links a:hover {
     background: #2B5E79;
-    color: white; }
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
 
 @media only screen and (max-width: 544px) {
   .button-links a {
@@ -190,7 +193,12 @@ section:nth-child(even) .lined-row {
   position: relative;
   display: inline-block;
   background-color: #2B5E79;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 5px transparent;
+  transition: box-shadow 0.5s; }
+
+.hover-text:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
 
 .hover-text img {
   opacity: 1;
