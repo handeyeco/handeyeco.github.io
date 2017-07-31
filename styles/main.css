@@ -112,6 +112,7 @@ canvas {
   text-align: center;
   margin-bottom: 2em; }
   .button-links a {
+    cursor: pointer;
     color: #2B5E79;
     border: 2px solid #2B5E79;
     padding: 0.5em 0;
