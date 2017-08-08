@@ -1,4 +1,4 @@
-if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
+if (CanvasSupported() && ES6Supported() && NotMobile()){
 
 (function() {
   const container = document.getElementById('canvas-container');
@@ -27,11 +27,11 @@ if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
   container.appendChild(canvas);
 
   control.classList.add('control');
-  control.innerHTML = '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+  control.innerHTML = '<i class="fa fa-volume-off" aria-hidden="true"></i>';
   container.appendChild(control);
 
   control.addEventListener("click", e => {
-    control.innerHTML = bells.toggleVolume() ? '<i class="fa fa-volume-off" aria-hidden="true"></i>' : '<i class="fa fa-volume-up" aria-hidden="true"></i>';
+    control.innerHTML = bells.toggleVolume() ? '<i class="fa fa-volume-up" aria-hidden="true"></i>' : '<i class="fa fa-volume-off" aria-hidden="true"></i>';
   });
 
   canvas.addEventListener("mousemove", e => {
