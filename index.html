@@ -42,6 +42,9 @@
 	<!-- Load Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 	<!-- Load Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 
@@ -49,6 +52,9 @@
 
 <body id="body">
 	<script>
+		// Randomly select canvas splash
+		const triangleSplash = Date.now() % 2 === 0;
+
 		//Remove FOUC while loading
 		var $body = document.getElementById('body');
 		$body.style.opacity = "0";
@@ -621,7 +627,15 @@
 
 	<!-- Load Custom JS -->
 	<script src="scripts/main.js"></script>
-	<script src="scripts/canvas-header.js"></script>
+
+	<!-- Hexagon Splash -->
+	<script src="scripts/Reverb.js"></script>
+	<script src="scripts/Bell.js"></script>
+	<script src="scripts/Hexagon.js"></script>
+	<script src="scripts/Canvas.js"></script>
+
+	<!-- Triangle Splash -->
+	<script src="scripts/Triangle.js"></script>
 
 	<script>
 		//Show page when loaded to block FOUC

@@ -7,3 +7,13 @@
     left: 0;
   }
 }
+
+@keyframes control {
+  0% {
+    top: -2em;
+  }
+
+  100% {
+    top: 0;
+  }
+}

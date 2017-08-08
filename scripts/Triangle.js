@@ -1,4 +1,4 @@
-if (CanvasSupported() && ES6Supported() && NotMobile()){
+if (triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
 
 (function Glitch() {
 
