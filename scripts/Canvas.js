@@ -18,6 +18,8 @@ if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
   const hex = hexagonPrototypeGenerator(maxWin / boardDimension)
   const hexCollect = [];
 
+  let lastMouseVector = [hex.radius * 14, window.innerHeight - hex.radius * 8];
+
   container.style.width = window.innerWidth + 'px';
   container.style.height = window.innerHeight - navHeight + 'px';
   canvas.width = window.innerWidth + hex.rectangleWidth;
@@ -33,6 +35,7 @@ if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
   });
 
   canvas.addEventListener("mousemove", e => {
+    lastMouseVector = [e.offsetX, e.offsetY];
     drawForMouseAndClick(ctx, e.offsetX, e.offsetY);
   });
 
@@ -51,7 +54,11 @@ if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
   window.addEventListener("keyup", e => {
     let freq = frequencies[characters.indexOf(e.key)]
     activeFreqs.splice(activeFreqs.indexOf(freq), 1);
-    drawForKeyPress(ctx, activeFreqs);
+    if (lastMouseVector && activeFreqs.length === 0) {
+      drawForMouseAndClick(ctx, lastMouseVector[0], lastMouseVector[1]);
+    } else {
+      drawForKeyPress(ctx, activeFreqs);
+    }
   });
 
   function drawForMouseAndClick(canvasContext, mouseX, mouseY, bells) {
@@ -76,7 +83,7 @@ if (!triangleSplash && CanvasSupported() && ES6Supported() && NotMobile()){
     }
   }
 
-  drawForMouseAndClick(ctx, hex.radius * 14, window.innerHeight - hex.radius * 8);
+  drawForMouseAndClick(ctx, lastMouseVector[0], lastMouseVector[1]);
 })();
 
 }
