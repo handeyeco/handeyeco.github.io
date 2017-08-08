@@ -45,7 +45,7 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
 
   window.addEventListener("keydown", e => {
     let freq = frequencies[characters.indexOf(e.key)]
-    if (activeFreqs.indexOf(freq) === -1) {
+    if (freq && activeFreqs.indexOf(freq) === -1) {
       activeFreqs.push(freq);
       drawForKeyPress(ctx, activeFreqs, freq);
     }
