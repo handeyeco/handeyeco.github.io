@@ -39,20 +39,28 @@ class BellChorus {
     const masterGain = ac.createGain();
     masterGain.gain.value = 0;
 
+    const compressor = ac.createDynamicsCompressor();
+
     const reverb = new simpleReverb(ac);
     const wet = ac.createGain();
     wet.gain.value = 0.8;
     const dry = ac.createGain();
     dry.gain.value = 0.2;
 
+    const filter = ac.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.value = 800;
+
     const bellCollection = [];
     for (let i = 0; i < numberOfBells; i++) {
       let bell = new Bell(ac, i);
-      bell.gain.connect(dry);
-      bell.gain.connect(wet);
+      bell.gain.connect(compressor);
       bellCollection.push(bell);
     }
 
+    compressor.connect(filter);
+    filter.connect(wet);
+    filter.connect(dry);
     wet.connect(reverb.input)
     reverb.connect(masterGain);
     dry.connect(masterGain);
