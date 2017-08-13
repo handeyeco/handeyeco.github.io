@@ -37,7 +37,7 @@ class BellChorus {
     const ac = new (window.AudioContext || window.webkitAudioContext)();
 
     const masterGain = ac.createGain();
-    masterGain.gain.value = 0;
+    masterGain.gain.value = 0.3;
 
     const compressor = ac.createDynamicsCompressor();
 
@@ -76,8 +76,19 @@ class BellChorus {
     this.count++;
   }
 
+  incrementVolume() {
+    if (this.masterGain.gain.value < 1) {
+      this.masterGain.gain.value += 0.1;
+    }
+  }
+
+  decrementVolume() {
+    if (this.masterGain.gain.value > 0) {
+      this.masterGain.gain.value -= 0.1;
+    }
+  }
+
   toggleVolume() {
-    // Bitwise XOR
-    return this.masterGain.gain.value ^= 1;
+    this.masterGain.gain.value = this.masterGain.gain.value ? 0 : 1;
   }
 }

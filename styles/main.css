@@ -109,8 +109,7 @@ section {
 canvas {
   display: block; }
 
-.control {
-  cursor: pointer;
+.key-suggest, .control {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,13 +118,26 @@ canvas {
   color: white;
   position: absolute;
   top: -2em;
-  right: 5vw;
-  width: 2em;
   height: 2em;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   animation: 1s control forwards;
   animation-delay: 1s; }
+
+.key-suggest {
+  left: 5vw; }
+  .key-suggest i {
+    font-size: 1.1em;
+    padding: 0.5em; }
+
+.control {
+  right: 5vw; }
+  .control .volume {
+    font-size: 0.5em;
+    padding: 1em;
+    margin: 0 1em; }
+  .control i {
+    cursor: pointer; }
 
 .button-links {
   display: flex;
