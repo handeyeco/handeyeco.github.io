@@ -194,7 +194,7 @@ section:nth-child(even) .lined-row {
     width: 49.9%; } }
 
 @media only screen and (min-width: 544px) {
-  .portfolio-highlight:nth-child(even) h3 {
+  .portfolio-highlight:nth-child(odd) h3 {
     text-align: right; } }
 
 .nav-wrapper {
