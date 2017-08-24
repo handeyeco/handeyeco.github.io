@@ -78,13 +78,13 @@ class BellChorus {
 
   incrementVolume() {
     if (this.masterGain.gain.value < 1) {
-      this.masterGain.gain.value += 0.1;
+      this.masterGain.gain.value = (this.masterGain.gain.value + 0.1).toFixed(1);
     }
   }
 
   decrementVolume() {
     if (this.masterGain.gain.value > 0) {
-      this.masterGain.gain.value -= 0.1;
+      this.masterGain.gain.value = (this.masterGain.gain.value - 0.1).toFixed(1);
     }
   }
 
