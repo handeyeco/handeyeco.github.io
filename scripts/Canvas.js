@@ -7,6 +7,10 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
 
+  const resolution = window.devicePixelRatio || 1;
+  console.log(resolution);
+  ctx.scale(resolution, resolution);
+
   const navHeight = document.getElementById('nav-wrapper').scrollHeight;
   const maxWin = Math.max(window.innerHeight, window.innerWidth);
   const boardDimension = 60;
@@ -21,7 +25,7 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
 
   let lastMouseVector = [hex.radius * 14, window.innerHeight - hex.radius * 8];
 
-  container.style.width = window.innerWidth + 'px';
+  // container.style.width = window.innerWidth + 'px';
   container.style.height = window.innerHeight - navHeight + 'px';
   canvas.width = window.innerWidth + hex.rectangleWidth;
   canvas.height = window.innerHeight + hex.rectangleHeight;
