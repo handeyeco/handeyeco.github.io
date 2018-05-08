@@ -19,7 +19,7 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
   const characters = ['z', 'x', 'c', 'v', 'b', 'n', 'm', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'];
   let activeFreqs = [];
 
-  const bells = new BellChorus(SimpleReverb, frequencies.length);
+  let bells;
   const hex = hexagonPrototypeGenerator(maxWin / boardDimension)
   const hexCollect = [];
 
@@ -41,6 +41,7 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
   setControlBackground(control, bells);
 
   control.addEventListener("click", e => {
+    initBells();
     if (!e.target || !e.target.dataset || !e.target.dataset.action) { return; }
 
     switch (e.target.dataset.action) {
@@ -59,15 +60,18 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
   });
 
   canvas.addEventListener("mousemove", e => {
+    initBells();
     lastMouseVector = [e.offsetX, e.offsetY];
     drawForMouseAndClick(ctx, e.offsetX, e.offsetY);
   });
 
   canvas.addEventListener("click", e => {
+    initBells();
     drawForMouseAndClick(ctx, e.offsetX, e.offsetY, bells);
   });
 
   window.addEventListener("keydown", e => {
+    initBells();
     if (e.key === '-' || e.key === '_') {
       bells.decrementVolume();
       setControlBackground(control, bells);
@@ -122,8 +126,15 @@ if (CanvasSupported() && ES6Supported() && NotMobile()){
   }
 
   function setControlBackground(control, bells) {
-    const volumePercent = (bells.masterGain.gain.value / 1) * 100;
+    const volume = bells ? bells.masterGain.gain.value : 0.3;
+    const volumePercent = (volume / 1) * 100;
     control.style.background = `linear-gradient(to right, #800000 0%, #800000 ${volumePercent}%, #a64c4c ${volumePercent}%, #a64c4c 100%)`;
+  }
+
+  function initBells() {
+    // Stupid hack because of stupid Chrome:
+    // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio
+    if (!bells) bells = new BellChorus(SimpleReverb, frequencies.length);
   }
 })();
 
