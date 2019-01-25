@@ -35,13 +35,13 @@
 
   <div class="container">
     <div class="parallax-container">
-      <div class="parallax-slide-3 desktop-only">
+      <div class="parallax-slide parallax-slide-3 desktop-only">
         <svg viewBox="0 0 4800 1200">
           <circle cx="2400" cy="600" r="300"/>
         </svg>
       </div>
 
-      <div class="parallax-slide-2 desktop-only">
+      <div class="parallax-slide parallax-slide-2 desktop-only">
         <svg viewBox="0 0 4800 1200">
           <polygon points="4800 500 800 1200 4800 1200"></polygon>
 
@@ -88,7 +88,7 @@
         </svg>
       </div>
 
-      <div class="parallax-slide-1 desktop-only">
+      <div class="parallax-slide parallax-slide-1 desktop-only">
         <svg viewBox="0 0 4800 1200">
           <polygon points="0 600 4000 1200 0 1200"></polygon>
 
@@ -264,3 +264,27 @@
 </body>
 
 </html>
+
+<script>
+  // Non-Chrome browsers don't like the CSS parallax ಠ_ಠ
+  // https://stackoverflow.com/a/13348618/6432058
+  var isChromium = window.chrome;
+  var winNav = window.navigator;
+  var vendorName = winNav.vendor;
+  var isOpera = typeof window.opr !== "undefined";
+  var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+  var isIOSChrome = winNav.userAgent.match("CriOS");
+  var isChrome = (
+    isChromium !== null &&
+    typeof isChromium !== "undefined" &&
+    vendorName === "Google Inc." &&
+    isOpera === false &&
+    isIEedge === false
+  );
+  var isNotParallaxSafe = !(isIOSChrome || isChrome);
+
+  if (isNotParallaxSafe) {
+    Array.from(document.querySelectorAll('.parallax-slide'))
+      .map(elem => elem.style.transform = 'none');
+  }
+</script>
