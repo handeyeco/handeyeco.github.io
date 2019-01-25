@@ -1,0 +1,415 @@
+@import 'reset';
+
+// https://colorhunt.co/palette/107677
+$white: lighten(#E7E7DE, 10%);
+$black: #000;
+
+$sky-top: #E7E7DE;
+$sky-bottom: #E7E7DE;
+$sun: $white;
+$forest: darken(#008891, 10%);
+$forest-mid: desaturate(lighten($forest, 13%), 40%);
+$forest-back: desaturate(lighten($forest, 25%), 50%);
+
+$intro: lighten($forest, 3%);
+$expo: #C3C39F;
+
+$ocean-top: lighten(mix($forest, #00587A, 80%), 12);
+$ocean-bottom: #0F3057;
+
+
+body, html {
+  font-family: 'EB Garamond', serif;
+  background: linear-gradient($sky-top, $sky-bottom);
+}
+
+@keyframes slide-left {
+  from {
+    right: -99rem;
+  }
+
+  to {
+    right: 2rem;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    right: 2rem;
+  }
+
+  to {
+    right: -99rem;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+.notification__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: visible;
+  z-index: 2;
+
+  input {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+.notification {
+  position: absolute;
+  display: inline-block;
+  top: 2rem;
+  right: -99rem;
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba($black, .25);
+  display: flex;
+  align-items: center;
+  animation: slide-left 1s ease 1s forwards;
+
+  span {
+    padding: 1rem;
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  a {
+    color: $black;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  svg {
+    height: 1rem;
+  }
+}
+
+.notification__dismiss:checked {
+  + .notification {
+    animation: slide-right 1s ease forwards;
+  }
+}
+
+.container {
+  font-size: 1.2rem;
+  perspective: 1px;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.treeline--front {
+  position: absolute;
+  bottom: 0;
+  fill: $forest;
+}
+
+.parallax-container {
+  height: 100vh;
+  position: relative;
+}
+
+.parallax-slide-1 {
+  transform: translateZ(-1px) scale(2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  > svg {
+    fill: $forest-mid;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.parallax-slide-2 {
+  transform: translateZ(-2px) scale(3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  > svg {
+    fill: $forest-back;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.parallax-slide-3 {
+  transform: translateZ(0.25px) scale(0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  > svg {
+    fill: $sun;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+}
+
+em {
+  font-family: 'Great Vibes', cursive;
+}
+
+a {
+  color: $white;
+}
+
+.slide {
+  padding: 10vh 5vw;
+
+  h1, h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-bottom: 3rem;
+  }
+
+  > p {
+    font-size: 1em;
+    margin-top: 1em;
+    line-height: 1.25em;
+    opacity: .8;
+    // text-align: justify;
+  }
+}
+
+.mobile-card {
+  color: $white;
+  background: $forest;
+  padding: 3rem 5vw;
+  position: relative;
+  min-height: 2rem;
+
+  p {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  p, a {
+    position: relative;
+    // display: none;
+  }
+
+  svg {
+    display: block;
+    fill: $intro;
+    height: 8rem;
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+  }
+}
+
+// Intoduction
+.intro {
+  background: $intro;
+  color: $white;
+}
+
+.angle {
+  height: 10vh;
+  background: $expo;
+}
+
+.angle > svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+  fill: $intro;
+}
+
+// Exposition
+.expo {
+  position: relative;
+  background: $expo;
+  color: $black;
+}
+
+.wave {
+  height: 50px;
+  background-color: $ocean-top;
+  background-image: url(images/wave.svg);
+  background-position: top center;
+  background-repeat: repeat-x;
+}
+
+// Resume
+.resume {
+  background: $ocean-top;
+  background: linear-gradient($ocean-top, $ocean-bottom);
+  color: $white;
+
+  > h2 {
+    font-size: 2rem;
+  }
+
+  > ul {
+    margin-bottom: 4rem;
+  }
+}
+
+.resume__row {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em 0;
+}
+
+.resume__date {
+  font-family: 'Great Vibes', cursive;
+  opacity: .5;
+}
+
+.resume__rule {
+  margin: 0 1rem;
+  flex-grow: 1;
+  border-bottom: 1px solid $white;
+  opacity: .5;
+  display: none;
+}
+
+.resume__location {
+  opacity: .5;
+}
+
+.resume__download {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.link-button {
+  font-size: 1.25rem;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba($black, .25);
+  text-decoration: none;
+  display: inline-block;
+  background: $white;
+  color: $ocean-bottom;
+  transition: all .3s;
+}
+
+.link-button:hover {
+  opacity: 1;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+
+  a {
+    margin: 0 1rem;
+  }
+
+  svg {
+    opacity: 0.5;
+    height: 2rem;
+    fill: $white;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 2px 2px 8px rgba($black, .25);
+    }
+  }
+}
+
+.footer {
+  font-size: 1rem;
+  background: $ocean-bottom;
+  color: $white;
+  padding: 4em 5vw 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    opacity: .5;
+    margin: 0.5em 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-card {
+    display: none;
+  }
+
+  .container {
+    font-size: 2rem;
+  }
+
+  .slide {
+    padding: 20vh 20vw;
+  }
+
+  .intro {
+    border-top: 0.5em solid $forest;
+  }
+
+  .resume__row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .resume__date {
+    opacity: 1;
+  }
+
+  .resume__rule {
+    display: block;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 1em 20vw;
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .desktop-only {
+    display: none;
+  }
+}

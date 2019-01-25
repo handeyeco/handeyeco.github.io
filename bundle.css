@@ -1,0 +1,418 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html {
+  font-family: "EB Garamond", serif;
+  background: linear-gradient(#E7E7DE, #E7E7DE);
+}
+
+@keyframes slide-left {
+  from {
+    right: -99rem;
+  }
+  to {
+    right: 2rem;
+  }
+}
+@keyframes slide-right {
+  from {
+    right: 2rem;
+  }
+  to {
+    right: -99rem;
+  }
+}
+.desktop-only {
+  display: none;
+}
+
+.notification__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: visible;
+  z-index: 2;
+}
+.notification__container input {
+  display: none;
+}
+.notification__container label {
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  display: inline-block;
+  top: 2rem;
+  right: -99rem;
+  background: #fcfcfc;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  animation: slide-left 1s ease 1s forwards;
+}
+.notification span {
+  padding: 1rem;
+}
+.notification p {
+  font-weight: 600;
+}
+.notification a {
+  color: #000;
+  display: block;
+  margin-top: 0.5rem;
+}
+.notification svg {
+  height: 1rem;
+}
+
+.notification__dismiss:checked + .notification {
+  animation: slide-right 1s ease forwards;
+}
+
+.container {
+  font-size: 1.2rem;
+  perspective: 1px;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.treeline--front {
+  position: absolute;
+  bottom: 0;
+  fill: #00585e;
+}
+
+.parallax-container {
+  height: 100vh;
+  position: relative;
+}
+
+.parallax-slide-1 {
+  transform: translateZ(-1px) scale(2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-slide-1 > svg {
+  fill: #207a80;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallax-slide-2 {
+  transform: translateZ(-2px) scale(3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-slide-2 > svg {
+  fill: #379fa6;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallax-slide-3 {
+  transform: translateZ(0.25px) scale(0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax-slide-3 > svg {
+  fill: #fcfcfc;
+  position: absolute;
+  bottom: 0;
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+}
+
+em {
+  font-family: "Great Vibes", cursive;
+}
+
+a {
+  color: #fcfcfc;
+}
+
+.slide {
+  padding: 10vh 5vw;
+}
+.slide h1, .slide h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+  margin-bottom: 3rem;
+}
+.slide > p {
+  font-size: 1em;
+  margin-top: 1em;
+  line-height: 1.25em;
+  opacity: 0.8;
+}
+
+.mobile-card {
+  color: #fcfcfc;
+  background: #00585e;
+  padding: 3rem 5vw;
+  position: relative;
+  min-height: 2rem;
+}
+.mobile-card p {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+.mobile-card p, .mobile-card a {
+  position: relative;
+}
+.mobile-card svg {
+  display: block;
+  fill: #00676d;
+  height: 8rem;
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+}
+
+.intro {
+  background: #00676d;
+  color: #fcfcfc;
+}
+
+.angle {
+  height: 10vh;
+  background: #C3C39F;
+}
+
+.angle > svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+  fill: #00676d;
+}
+
+.expo {
+  position: relative;
+  background: #C3C39F;
+  color: #000;
+}
+
+.wave {
+  height: 50px;
+  background-color: #008ea1;
+  background-image: url(images/wave.svg);
+  background-position: top center;
+  background-repeat: repeat-x;
+}
+
+.resume {
+  background: #008ea1;
+  background: linear-gradient(#008ea1, #0F3057);
+  color: #fcfcfc;
+}
+.resume > h2 {
+  font-size: 2rem;
+}
+.resume > ul {
+  margin-bottom: 4rem;
+}
+
+.resume__row {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em 0;
+}
+
+.resume__date {
+  font-family: "Great Vibes", cursive;
+  opacity: 0.5;
+}
+
+.resume__rule {
+  margin: 0 1rem;
+  flex-grow: 1;
+  border-bottom: 1px solid #fcfcfc;
+  opacity: 0.5;
+  display: none;
+}
+
+.resume__location {
+  opacity: 0.5;
+}
+
+.resume__download {
+  margin-top: 4em;
+  text-align: center;
+}
+
+.link-button {
+  font-size: 1.25rem;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  display: inline-block;
+  background: #fcfcfc;
+  color: #0F3057;
+  transition: all 0.3s;
+}
+
+.link-button:hover {
+  opacity: 1;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+.social-icons a {
+  margin: 0 1rem;
+}
+.social-icons svg {
+  opacity: 0.5;
+  height: 2rem;
+  fill: #fcfcfc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.social-icons svg:hover {
+  opacity: 1;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  font-size: 1rem;
+  background: #0F3057;
+  color: #fcfcfc;
+  padding: 4em 5vw 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer p {
+  opacity: 0.5;
+  margin: 0.5em 0;
+}
+
+@media (min-width: 800px) {
+  .container {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-card {
+    display: none;
+  }
+
+  .container {
+    font-size: 2rem;
+  }
+
+  .slide {
+    padding: 20vh 20vw;
+  }
+
+  .intro {
+    border-top: 0.5em solid #00585e;
+  }
+
+  .resume__row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .resume__date {
+    opacity: 1;
+  }
+
+  .resume__rule {
+    display: block;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 1em 20vw;
+    flex-direction: row;
+  }
+}
+@media (orientation: portrait) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=bundle.css.map */

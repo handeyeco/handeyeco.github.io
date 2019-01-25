@@ -2,729 +2,265 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matthew Curtis is a web developer currently based in Austin, TX and specializing in HTML, CSS, and JavaScript libraries such as React, D3, and THREE.js.">
+  <meta name="theme-color" content="#00585E">
 
-	<!--========================================-->
-	<!--========================================-->
-	<!-- Thanks for taking a look ==============-->
-	<!-- I should have minified the code =======-->
-	<!-- but I figured since it's a resume =====-->
-	<!-- maybe someone would look at the source -->
-	<!-- (which is also on Github with notes) ==-->
-	<!--========================================-->
-	<!-- Have a good day! ======================-->
-	<!--                                Matthew -->
-	<!--========================================-->
-	<!--========================================-->
-
-	<!-- SEO Stuff -->
-	<title>Matthew Curtis, Developer</title>
-	<link href="http://matthewbryancurtis.com" rel="canonical" />
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<meta name="description" content="Resume for Austin, TX developer and digital artist Matthew Curtis." />
-	<meta name="author" content="Matthew Curtis" />
-
-	<!-- I put this here exclusively for Facebook -->
-	<meta property="og:image" content="http://matthewbryancurtis.com/images/open-graph.png" />
-	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:width" content="3200" />
-	<meta property="og:image:height" content="2120" />
-	<meta property="og:image:alt" content="Display of maroon hexagons overlaid with the text Matthew Curtis, Developer" />
-
-	<meta property="og:title" content="Matthew Curtis, Developer" />
-	<meta property="og:url" content="http://matthewbryancurtis.com" />
-	<meta property="og:site_name" content="Matthew Curtis, Developer" />
-	<meta property="og:description" content="Resume for Austin, TX developer and digital artist Matthew Curtis." />
-
-
-	<!-- Load Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-	<!-- Load Google Font -->
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-	<!-- Font Awesome -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-	<!-- Load Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="./styles/main.css">
-
+  <title>Matthew Curtis, Developer</title>
+  <link rel="shortcut icon" href="/icons/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  <link rel="stylesheet" href="bundle.css" />
+  <link rel="manifest" href="/manifest.json">
 </head>
 
-<body id="body">
-	<script>
-		// Randomly select canvas splash
-		const triangleSplash = Date.now() % 2 === 0;
+<body>
+  <div class="notification__container desktop-only">
+    <input class="notification__dismiss" type="checkbox" id="notification__dismiss" />
+    <div class="notification">
+      <span>
+        <p>Matthew Curtis, Developer</p>
+        <a href="mailto:matthew@matthewbryancurtis.com">matthew@matthewbryancurtis.com</a>
+      </span>
+      <span>
+        <label for="notification__dismiss">
+          <svg viewBox="0 0 352 512">
+            <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+          </svg>
+        </label>
+      </span>
+    </div>
+  </div>
 
-		//Remove FOUC while loading
-		var $body = document.getElementById('body');
-		$body.style.opacity = "0";
-	</script>
+  <div class="container">
+    <div class="parallax-container">
+      <div class="parallax-slide-3 desktop-only">
+        <svg viewBox="0 0 4800 1200">
+          <circle cx="2400" cy="600" r="300"/>
+        </svg>
+      </div>
 
-	<!--=============-->
-	<!--=============-->
-	<!-- Splash Page -->
-	<!--=============-->
-	<!--=============-->
-	<noscript>
-		<div class="noscript">This site is pretty cool with <a href="http://www.enable-javascript.com/" target="_blank">JavaScript</a>.</div>
-	</noscript>
+      <div class="parallax-slide-2 desktop-only">
+        <svg viewBox="0 0 4800 1200">
+          <polygon points="4800 500 800 1200 4800 1200"></polygon>
 
-	<!-- Landing for canvas header -->
-	<div id="canvas-container" class="canvas-container hide-tablet"></div>
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(2500, 4000)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(3000, 4000)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(3800, 3800) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(4100, 3600)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(4500, 3500)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(4900, 3500) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(5300, 3400)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(5800, 3400)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(6300, 3200) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(6700, 3200)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(7000, 3200)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(7400, 3200) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(8000, 3100)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(8400, 2800)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(8800, 2800) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(9200, 2800)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(9600, 2500)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(10000, 2500) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(10400, 2500)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(10800, 2500)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(11200, 2300) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(11600, 2300)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(12000, 2300)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(12400, 2300) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(12800, 2100)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(13300, 2100)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(13700, 1800) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(14100, 1800)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(14500, 1800)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(14900, 1800) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(15200, 1600)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(15700, 1600)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(16000, 1600) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(16500, 1400)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.25) translate(16900, 1400)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(17300, 1400) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.25) translate(17700, 1400)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.25) translate(18000, 1200)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.25) translate(18400, 1200) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.25) translate(18800, 1200)" />
+        </svg>
+      </div>
 
-	<!--============-->
-	<!--============-->
-	<!-- Navigation -->
-	<!--============-->
-	<!--============-->
-	<div class="nav-wrapper" id="nav-wrapper">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a href="#about">About</a></li>
-						<li><a href="#skills">Skills</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#resume">Resume</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
+      <div class="parallax-slide-1 desktop-only">
+        <svg viewBox="0 0 4800 1200">
+          <polygon points="0 600 4000 1200 0 1200"></polygon>
 
-	<!--=============-->
-	<!--=============-->
-	<!-- About Slide -->
-	<!--=============-->
-	<!--=============-->
-	<section id="about">
-		<div class="slide-container">
-			<h2>About</h2>
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.5) translate(-500, 500)rotate(-10)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.5) translate(100, 500) rotate(20)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(300, 500)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.5) translate(500, 600) rotate(-10)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.5) translate(1000, 600)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(1300, 600)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.5) translate(1600, 700)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.5) translate(1800, 700)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.5) translate(2100, 700) rotate(20)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(2300, 800)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.5) translate(2600, 900) rotate(-10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(3100, 900)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.5) translate(3600, 900)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.5) translate(4000, 1100)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.5) translate(4500, 1100) rotate(20)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.5) translate(4700, 1200)" />
+          <use xlink:href="images/trees.svg#tree5" transform="scale(0.5) translate(5100, 1200)" />
+          <use xlink:href="images/trees.svg#tree4" transform="scale(0.5) translate(5400, 1800)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(5800, 1200)" />
+          <use xlink:href="images/trees.svg#tree1" transform="scale(0.5) translate(6200, 1200)" />
+          <use xlink:href="images/trees.svg#tree3" transform="scale(0.5) translate(6500, 1300)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(0.5) translate(7000, 1300) rotate(10)" />
+        </svg>
+      </div>
+    </div>
 
-			<!-- Start grid -->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-4 about-col hide-margin">
-						I'm a full stack developer interested in making beautiful and curious things with code. My background revolves around working in high-tech, high-stress roles for companies that make money by being creative.
-					</div>
-					<div class="col-sm-4 text-center v-center">
-						<img src="images/forest_selfie.jpg" class="selfie" alt="Picture of Matthew Curtis pretending to rock climb">
-					</div>
-					<div class="col-sm-4 about-col">
-						<p><strong>Matthew Curtis</strong>
-							<br> Austin, TX</p>
+    <div class="content-container">
+      <section class="hero desktop-only">
+        <svg class="treeline--front" viewBox="0 0 4800 1200">
+          <polygon points="4800 600 3500 1200 4800 1200"></polygon>
+          <polygon points="0 600 1300 1200 0 1200"></polygon>
 
-						<p><a href="mailto:matthew@matthewbryancurtis.com">matthew@matthewbryancurtis.com</a></p>
+          <use xlink:href="images/trees.svg#tree1" transform="translate(-400, 0) rotate(10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="translate(-200, 0)" />
+          <use xlink:href="images/trees.svg#tree3" transform="translate(200, 200)" />
+          <use xlink:href="images/trees.svg#tree5" transform="translate(400, 400) rotate(-10)" />
+          <use xlink:href="images/trees.svg#tree2" transform="scale(-1,1) translate(-2000, 600)" />
+          <use xlink:href="images/trees.svg#tree3" transform="translate(2800, 400)" />
+          <use xlink:href="images/trees.svg#tree5" transform="translate(3300, 300)" />
+          <use xlink:href="images/trees.svg#tree1" transform="translate(3500, 200) rotate(-5)" />
+          <use xlink:href="images/trees.svg#tree4" transform="translate(3800, 0)" />
+          <use xlink:href="images/trees.svg#tree2" transform="translate(4100, 0)" />
+        </svg>
+      </section>
 
-						<div class="button-links">
-							<a href="https://github.com/matthewbryancurtis" target="_blank">GitHub</a>
-							<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">LinkedIn</a>
-							<!-- <a href="http://blog.matthewbryancurtis.com/" target="_blank">Blog</a> -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End grid -->
+      <section class="mobile-card">
+        <svg viewBox="0 0 1200 1200">
+          <use xlink:href="images/trees.svg#tree1" />
+        </svg>
+        <p>Matthew Curtis, Developer</p>
+        <a href="mailto:matthew@matthewbryancurtis.com">matthew@matthewbryancurtis.com</a>
+      </section>
 
-		</div>
-	</section>
+      <section class="slide intro">
+        <h1>Hey, my name is Matthew.</h1>
+        <p>I'm a developer, community organizer, and artist. I lay down code full-time for a Denver startup called <a href="https://www.darkowl.com/">DarkOwl</a>. In an effort to help newbies in the tech community, I run a group called <a href="https://www.meetup.com/Austin-Code-Mentorship/">Austin Code Mentorship</a>. I'm also a creative coder, daily doodler, and Sunday painter.</p>
 
-	<!--==============-->
-	<!--==============-->
-	<!-- Skills Slide -->
-	<!--==============-->
-	<!--==============-->
-	<section id="skills">
-		<div class="slide-container">
-			<h2>Skills</h2>
+        <p>While I'm currently based out of beautiful Austin, I've previously worked in New York City and Portland.</p>
+      </section>
 
-			<!-- Start grid -->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="hide-margin">JavaScript</h3>
-					</div>
-				</div>
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<p>Comfortable In</p>
-						<ul>
-							<li>ES6+</li>
-							<li>React</li>
-							<li>Vue</li>
-							<li>Angular</li>
-							<li>Node</li>
-							<li>Express</li>
-							<li>Webpack</li>
-							<li>Grunt</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Experienced In</p>
-						<ul>
-							<li>THREE</li>
-							<li>regl</li>
-							<li>WebGL</li>
-							<li>D3</li>
-							<li>Canvas</li>
-							<li>Web Audio</li>
-							<li>Espruino</li>
-							<li>WebVR</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Interested In</p>
-						<ul>
-							<li>Pixi</li>
-							<li>P5</li>
-							<li>GreenSock</li>
-							<li>React Native</li>
-							<li>Redux</li>
-							<li>Parcel</li>
-							<li>Koa</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<h3 class="hide-margin">Computers</h3>
-					</div>
-				</div>
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<p>Comfortable In</p>
-						<ul>
-							<li>HTML5 & CSS3</li>
-							<ul>
-								<li>Sass (SCSS)</li>
-								<li>CSS Animations</li>
-								<li>Bootstrap</li>
-							</ul>
-							<li>Python</li>
-							<ul>
-								<li>Flask</li>
-								<li>MicroPython</li>
-							</ul>
-							<li>Git/GitHub</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Experienced In</p>
-						<ul>
-							<li>The Internet of Things</li>
-							<li>Chrome Extensions</li>
-							<li>PHP</li>
-							<ul>
-								<li>Silex</li>
-								<li>Twig</li>
-							</ul>
-							<li>Java</li>
-							<li>Firebase</li>
-							<li>C</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Interested In</p>
-						<ul>
-							<li>Swift</li>
-							<li>Electron</li>
-							<li>Ruby on Rails</li>
-							<li>Virtual Reality</li>
-							<li>Processing</li>
-							<li>openFrameworks</li>
-							<li>EdTech</li>
-							<li>Open Source</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<h3>General Life</h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<p>Comfortable In</p>
-						<ul>
-							<li>Reading Novels</li>
-							<li>Audio Engineering</li>
-							<li>Coldbrew Coffee</li>
-							<li>Hiking</li>
-							<li>Building Things</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Experienced In</p>
-						<ul>
-							<li>Bicycle Repair</li>
-							<li>Vegetable Gardening</li>
-							<li>Art Appreciation</li>
-							<li>Listening to NPR</li>
-							<li>Maker Culture</li>
-						</ul>
-					</div>
-					<div class="col-sm-4">
-						<p>Interested In</p>
-						<ul>
-							<li>Digital Art</li>
-							<li>Skateboarding</li>
-							<li>Electrical Engineering</li>
-							<li>Oil Painting</li>
-							<li>Freedom of Information</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- End grid -->
+      <div class="angle">
+        <svg viewBox="0 0 100 25" preserveAspectRatio="none">
+          <polygon points="-1.42108547e-14 0 100 0 18 25" />
+        </svg>
+      </div>
 
-		</div>
-	</section>
+      <section class="slide expo" id="exposition">
+        <h2>My expertise is web development...</h2>
+        <p>...but I love any challenge that's technical and a little artsy. JavaScript is my jam, and on any given day you can find me working in React, Vue, or Angular. I don't stop at front-end though - I also enjoy Node, Python, and Java.</p>
+      </section>
 
-	<!--=================-->
-	<!--=================-->
-	<!-- Portfolio Slide -->
-	<!--=================-->
-	<!--=================-->
-	<section id="portfolio">
-		<div class="slide-container">
-			<h2>Portfolio</h2>
+      <div class="wave"></div>
 
-			<!-- Start grid -->
-			<div class="container-fluid">
-				<div class="row padded-row lined-row portfolio-highlight">
-					<div class="col-sm-4 col-sm-push-8 hide-mobile">
-							<img class="portfolio-img-lg" src="images/portfolio/google.png" alt="Calculator app make with React JS" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4">
-						<h3>Google BrandLab</h3>
-						<p>During my internship at Uncorked Studios, I was on the Google BrandLab project - a physical installation at Google’s Mountain View campus that uses a combination of web technologies and Google-specific technologies to create a beautiful yet utilitarian part of the facility. I helped to maintain the code, participated in client meetings, and researched opportunities to improve the project.</p>
-						<div class="button-links">
-							<a href="http://www.uncorkedstudios.com/work/telling-a-new-story/" target="_blank">Case Study</a>
-						</div>
-					</div>
-				</div>
+      <section class="slide resume">
+        <h2>Work</h2>
+        <ul>
+          <li class="resume__row">
+            <p class="resume__date">'17-Present</p>
+            <div class="resume__rule"></div>
+            <p>Developer <span class="resume__location">@ DarkOwl</span></p>
+          </li>
 
-				<div class="row padded-row lined-row portfolio-highlight">
-					<div class="col-sm-4 hide-mobile">
-							<img class="portfolio-img-lg" src="images/portfolio/map-the-dark.png" alt="Darknet data visualization" />
-					</div>
-					<div class="col-sm-8">
-						<h3>Map the Dark</h3>
-						<p>At DarkOwl, I was the lead developer of an interactive data visualization that seeks to give users a peak at what languages, topics, and domains makeup the darknet. I started by writing a program that normalized the data for the 73,000+ sites from the dark web that we have indexed. Using the compiled data, I created the interactive with a low-level, reactive WebGL abstraction and a modern JavaScript framework for the UI. As a marketing piece, extra consideration was given to SEO, ease of use, and shareability.</p>
-						<div class="button-links">
-							<a href="https://mapthedark.com/" target="_blank">Website</a>
-						</div>
-					</div>
-				</div>
+          <li class="resume__row">
+            <p class="resume__date">'17</p>
+            <div class="resume__rule"></div>
+            <p>Development Intern <span class="resume__location">@ Uncorked Studios</span></p>
+          </li>
 
-				<div class="row padded-row lined-row portfolio-highlight">
-					<div class="col-sm-4 col-sm-push-8 hide-mobile">
-							<img class="portfolio-img-lg" src="images/portfolio/levar.png" alt="Microcontroller ESP8266" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4">
-						<h3>Full Stack with Levar</h3>
-						<p>At Uncorked Studios, I played an integral role in the development of a full-stack JavaScript application that helps users quickly caption videos in a highly aesthetic and stylized way. Working on a collaborative team of designers and developers, I wrote a large portion of the code base, tracked and addressed new features and bugs, and helped train my peers in React best practices. We wrote the backend REST API in Node/Express, the frontend in React/Sass, and utilized IBM's Watson AI API for speech-to-text conversion.</p>
-						<div class="button-links">
-							<a href="http://www.levar.io/" target="_blank">Website</a>
-							<a href="https://github.com/matthewbryancurtis/levar" target="_blank">GitHub Repo</a>
-						</div>
-					</div>
-				</div>
+          <li class="resume__row">
+            <p class="resume__date">'07-'16</p>
+            <div class="resume__rule"></div>
+            <p>Freelance Audio Engineer</p>
+          </li>
 
-				<!-- <div class="row padded-row lined-row portfolio-highlight">
-					<div class="col-sm-4 col-sm-push-8 hide-mobile">
-							<img class="portfolio-img-lg" src="images/portfolio/impress.png" alt="Calculator app make with React JS" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4">
-						<h3>Impressing Impressionism</h3>
-						<p>In between working at Simple and Uncorked, I decided to teach myself Python while pursuing an interest of mine - art! My Impress project is built as a platform for artists and educators to share pieces in a gallery-like setting optimized for the web, using a custom CMS made with art enthusiasts in mind. The backend is a frontend agnostic REST API built with Python and Flask. Impress includes a generalized frontend built with React but is made to function with other custom frontends.</p>
-						<div class="button-links">
-							<a href="https://github.com/matthewbryancurtis/impress" target="_blank">GitHub Repo</a>
-						</div>
-					</div>
-				</div> -->
+          <li class="resume__row">
+            <p class="resume__date">'11-'14</p>
+            <div class="resume__rule"></div>
+            <p>Systems Administrator <span class="resume__location">@ BookPeople</span></p>
+          </li>
 
-				<div class="row padded-row lined-row portfolio-highlight">
-					<div class="col-sm-4 hide-mobile">
-							<img class="portfolio-img-lg" src="images/portfolio/things.png" alt="Microcontroller ESP8266" />
-					</div>
-					<div class="col-sm-8">
-						<h3>Internet of Stuff</h3>
-						<p>With a history of working with hardware, I decided to join the JavaScript &amp; the Internet of Things Meetup group where I contributed to open source projects and prototyped a full-stack JavaScript IoT proof-of-concept (Espruino, Node, React, and React Native). Excited to try with Python, I developed an e-Ink IoT door display that collected scheduled room activity from the Google Calendar API to display upcoming events and availability (MicroPython and Flask).</p>
-						<div class="button-links">
-							<a href="https://github.com/UncorkedStudios/esp8266-iot-door" target="_blank">Python Repo</a>
-							<a href="https://github.com/matthewbryancurtis/iot-hello-world" target="_blank">JavaScript Repo</a>
-						</div>
-					</div>
-				</div>
+          <li class="resume__row">
+            <p class="resume__date">'07-'10</p>
+            <div class="resume__rule"></div>
+            <p>Robot Builder <span class="resume__location">@ Arrick Robotics</span></p>
+          </li>
+        </ul>
 
-				<div class="portfolio-outer-flex">
-					<div class="portfolio-inner-flex">
+        <h2>Volunteer</h2>
+        <ul>
+          <li class="resume__row">
+            <p class="resume__date">'18-Present</p>
+            <div class="resume__rule"></div>
+            <p>Founder <span class="resume__location">@ Austin Code Mentorship</span></p>
+          </li>
 
-						<div class="portfolio-block text-center">
-							<figure class="hover-text">
-								<a href="http://matthewbryancurtis.com/calculator/" target="_blank">
-									<img src="images/portfolio/calc-min.png" alt="A friendly, stretchy calculator" />
-									<figcaption>
-										<ul>
-											<li>React</li>
-											<li>JSX</li>
-											<li>Sass/SCSS</li>
-											<li>Responsiness</li>
-											<li>Math</li>
-										</ul>
-									</figcaption>
-								</a>
-							</figure>
-							<h3>Big Ass Calculator</h3>
-						</div>
+          <li class="resume__row">
+            <p class="resume__date">'16-'18</p>
+            <div class="resume__rule"></div>
+            <p>Web Development Teacher <span class="resume__location">@ Free Geek</span></p>
+          </li>
 
-						<div class="portfolio-block text-center">
-							<figure class="hover-text">
-								<a href="http://matthewbryancurtis.com/robo_bob_ross/" target="_blank">
-									<img src="images/portfolio/bobross-min.png" alt="Robo Bob Ross app shuffles inspiraitonal Bob Ross quotes" />
-									<figcaption>
-										<ul>
-											<li>JavaScript</li>
-											<li>HTML5</li>
-											<li>CSS3</li>
-											<li>Twitter API</li>
-											<li>jQuery</li>
-										</ul>
-									</figcaption>
-								</a>
-							</figure>
-							<h3>Robo Bob Ross</h3>
-						</div> <!-- Block -->
+          <li class="resume__row">
+            <p class="resume__date">'12-'13</p>
+            <div class="resume__rule"></div>
+            <p>Tech Team Member <span class="resume__location">@ KOOP Radio</span></p>
+          </li>
+        </ul>
 
-					</div>
-					<div class="portfolio-inner-flex">
+        <div class="resume__download">
+          <a class="link-button" href="http://matthewbryancurtis.com/matthew_curtis_resume.pdf" target="_blank" download>Download CV</a>
+        </div>
 
-						<div class="portfolio-block text-center">
-							<figure class="hover-text">
-								<a href="http://matthewbryancurtis.com/map/" target="_blank">
-									<img src="images/portfolio/map.png" alt="An interactive map design for touch devices" />
-									<figcaption>
-										<ul>
-											<li>JavaScript</li>
-											<li>HTML5</li>
-											<li>CSS3</li>
-											<li>SVG</li>
-											<li>Touch TV</li>
-										</ul>
-									</figcaption>
-								</a>
-							</figure>
-							<h3>Touch TV Map</h3>
-						</div>
+        <div class="social-icons">
+          <a href="mailto:matthew@matthewbryancurtis.com">
+            <svg viewBox="0 0 448 512">
+              <title>Email</title>
+              <path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM178.117 262.104C87.429 196.287 88.353 196.121 64 177.167V152c0-13.255 10.745-24 24-24h272c13.255 0 24 10.745 24 24v25.167c-24.371 18.969-23.434 19.124-114.117 84.938-10.5 7.655-31.392 26.12-45.883 25.894-14.503.218-35.367-18.227-45.883-25.895zM384 217.775V360c0 13.255-10.745 24-24 24H88c-13.255 0-24-10.745-24-24V217.775c13.958 10.794 33.329 25.236 95.303 70.214 14.162 10.341 37.975 32.145 64.694 32.01 26.887.134 51.037-22.041 64.72-32.025 61.958-44.965 81.325-59.406 95.283-70.199z"></path>
+            </svg>
+          </a>
 
-						<div class="portfolio-block text-center">
-							<figure class="hover-text">
-								<a href="http://matthewbryancurtis.com/depressing_weather/" target="_blank">
-									<img src="images/portfolio/weather-min.png" alt="Weather app to make you feel better" />
-									<figcaption>
-										<ul>
-											<li>JavaScript</li>
-											<li>Twitter API</li>
-											<li>Weather API</li>
-											<li>IP API</li>
-											<li>jQuery</li>
-										</ul>
-									</figcaption>
-								</a>
-							</figure>
-							<h3>Depressing Weather</h3>
-						</div>
+          <a href="https://twitter.com/matthewissound" target="_blank" rel="noopener">
+            <svg viewBox="0 0 448 512">
+              <title>Twitter</title>
+              <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>
+            </svg>
+          </a>
 
-					</div> <!-- Inner Flex -->
-				</div> <!-- Outer Flex -->
+          <a href="https://github.com/matthewbryancurtis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 448 512">
+              <title>Github</title>
+              <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"></path>
+            </svg>
+          </a>
 
-				<div class="button-links">
-					<a href="https://github.com/matthewbryancurtis" target="_blank">Check Out My GitHub</a>
-				</div>
-			</div> <!-- Container -->
-			<!-- End grid -->
+        <a href="https://www.linkedin.com/in/matthewbryancurtis/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 448 512">
+            <title>LinkedIn</title>
+            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+          </svg>
+        </a>
+        </div>
+      </section>
 
-		</div> <!-- Slide container -->
-	</section>
-
-	<!--==============-->
-	<!--==============-->
-	<!-- Resume Slide -->
-	<!--==============-->
-	<!--==============-->
-	<section id="resume">
-		<div class="slide-container">
-			<h2>Resume</h2>
-
-			<!-- Start grid -->
-			<div class="container-fluid">
-				<h3 class="hide-margin">Select Work Experience</h3>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>DarkOwl</h4>
-						<span class="accent-color">2017 - Present</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Devsigner (Development + Design)</p>
-						<p class="hide-mobile">
-							I'm part of a small, agile team of developers at DarkOwl, a cyber security startup working to index and monitor malicious activity on the dark web. As the only developer specializing in the client-facing side of our product, I actively work to maintain, update, and enhance our enterprise web app to fulfill business needs and to accommodate our clientele. The tools of the trade are Angular (2.0), AngularJS (1.6), and Sass/SCSS. I also create data visualizations and contribute as a backend developer.
-						</p>
-						<a href="https://www.darkowl.com/" target="_blank">www.darkowl.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Uncorked Studios</h4>
-						<span class="accent-color">2017</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Development Intern</p>
-						<p class="hide-mobile">
-							Uncorked Studios is a creative agency specializing in the merger of digital and physical products. I was on the <a href="https://www.uncorkedstudios.com/work/telling-a-new-story/" target="_blank">Google BrandLab</a> project, an interactive and physical installation with a web-based interface. I also worked on a full-stack JavaScript app for quick video captioning (React, Sass, Node, and Express), built an IoT room schedule display with the Google Calendar API (MicroPython and Flask), and developed an interactive office map optimized for a touch TV. All while studying iOS development with Swift.
-						</p>
-						<a href="https://www.uncorkedstudios.com/" target="_blank">www.uncorkedstudios.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Simple Finance</h4>
-						<span class="accent-color">2016 - 2017</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Customer Relations Agent</p>
-						<p class="hide-mobile">
-							Simple is a financial tech company in Portland, OR that's working on changing the world with better banking tools and practices. I helped customers use our app, track money, and reported bugs that anyone might run into. On my breaks I worked on developing custom Chrome extensions to make the work I was doing more efficient.
-						</p>
-						<a href="https://www.simple.com/" target="_blank">www.simple.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Freelance</h4>
-						<span class="accent-color">2007 - 2016</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Audio Engineer</p>
-						<p class="hide-mobile">
-							A regular at quintessential Manhattan (Le Poisson Rouge, The Bell House) and Austin (The Parish, Scoot Inn, North Door) venues, I've also worked on albums, film sets, radio shows, and corporate events. I have experienced first-hand the stress of South by Southwest, CMJ Music Marathon, and Fun Fun Fun Fest in ways most people can't imagine. I also built the website for my audio CV.
-						</p>
-						<a href="http://www.matthew.intheairmusic.com" target="_blank">www.matthew.intheairmusic.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>BookPeople</h4>
-						<span class="accent-color">2011 - 2014</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Network / System Administrator</p>
-						<p class="hide-mobile">
-							Over the course of three years I completed a technological overhaul of Texas' largest independent bookstore. Everything from server maintenance (AIX, Linux, Windows) to workstation customization (Linux, Windows, Mac) from corporate requirements (OpenVPN, in-store and remote POS, RAID file repositories) to customer wants (guest WAPs, secure kiosks, Drupal and WordPress websites), really anything that required electricity, fell under my supervision. That for a business that runs 364 days out of the year.
-						</p>
-						<a href="http://www.bookpeople.com" target="_blank">www.bookpeople.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<h4>Arrick Robotics</h4>
-						<span class="accent-color">2007 - 2010</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Quality Assurance Specialist</p>
-						<p class="hide-mobile">
-							I built, tested, and shipped manufacturing robotics and modular synthesizers. While most days were spent in front of a soldering iron, voltmeter, and/or oscilloscope, I also helped manage incoming orders and trained new employees.
-						</p>
-						<a href="http://www.arrickrobotics.com" target="_blank">www.arrickrobotics.com</a>
-					</div>
-				</div>
-
-				<h3>Community</h3>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Free Geek</h4>
-						<span class="accent-color">2016 - Present</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Teacher</p>
-						<p class="hide-mobile">
-							Free Geek has been trying to cast a wider net with its education program, so myself and another developer are working to bring programming workshops to the organization. I wrote a course called "Introduction to Programming with JavaScript" which teaches universal programming concepts to beginners and co-wrote "Introduction to HTML &amp; CSS" which teaches the fundamentals of web development.
-						</p>
-						<a href="http://www.freegeek.org/" target="_blank">www.freegeek.org</a>
-					</div>
-				</div>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>CS Study Group</h4>
-						<span class="accent-color">2016 - Present</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Organizer</p>
-						<p class="hide-mobile">
-							I co-organize a Saturday morning computer science study group centered around massive open online courses (MOOC). Our first course was Harvard's CS50 where we studied core CS theory from binary to full stack web development with C, Python, SQL, and JavaScript. Now we're working through Stanford's CS193P - iOS development with Swift and Xcode.
-						</p>
-						<a href="https://www.meetup.com/mentorship-saturdays/" target="_blank">www.meetup.com/mentorship-saturdays</a>
-						</div>
-					</div>
-
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<h4>KOOP Radio</h4>
-						<span class="accent-color">2012 - 2013</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Tech Team Volunteer</p>
-						<p class="hide-mobile">
-							The Tech Team at KOOP is in charge of keeping the technical equipment maintained and the programming on the air. We were in charge of the servers and workstations, repaired audio equipment when needed, and made sure the station was in compliance with FCC regulations.
-						</p>
-						<a href="http://www.koop.org" target="_blank">www.koop.org</a>
-					</div>
-				</div>
-
-				<h3>Independent Study</h3>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Epicodus</h4>
-						<span class="accent-color">2016</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Learn How to Program PHP Curriculum</p>
-						<p class="hide-mobile">
-							Epicodus puts its curriculum online, so I worked through their PHP course independently. It's a great crash course on PHP and SQL that has an emphasis on proper MVC structure (using the Silex framework), test-driven development (using the PHPUnit testing framework), and templating views (using the Twig templating language).							</p>
-						<a href="https://www.learnhowtoprogram.com" target="_blank">www.learnhowtoprogram.com</a>
-					</div>
-				</div>
-
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<h4>Free Code Camp</h4>
-						<span class="accent-color">2016</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">Front-End Development Certificate</p>
-						<p class="hide-mobile">
-							Earned a certificate in Front-End Development. Built games, apps, and websites using HTML5, CSS3, and JavaScript. Went above and beyond when possible utilizing React, Sass, ES6, JSX, Webpack, and Node/NPM on many of the projects. Devoted special attention to studying design, UX, and accessibility.
-						</p>
-						<a href="http://www.freecodecamp.com" target="_blank">www.freecodecamp.com</a>
-					</div>
-				</div>
-
-				<h3>Formal Education</h3>
-
-				<div class="row padded-row lined-row">
-					<div class="col-sm-4">
-						<h4>Austin Community College</h4>
-						<span class="accent-color">Class of 2012</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">AAS in Audio Engineering</p>
-						<p class="hide-mobile">
-							Earned an associates degree in Music Business, Performance, and Technology (Magna Cum Laude) while studying audio engineering. Though I specialized in music recording and reenforcement, I also studied music business, production, event management, and audio for radio, television, and film.
-						</p>
-						<a href="http://www.austincc.edu" target="_blank">www.austincc.edu</a>
-					</div>
-				</div>
-
-				<div class="row padded-row">
-					<div class="col-sm-4">
-						<h4>Tyler Junior College</h4>
-						<span class="accent-color">Class of 2010</span>
-					</div>
-					<div class="col-sm-8">
-						<p class="job-title">AAS in Business Management</p>
-						<p class="hide-mobile">
-							Earned an associates degree in Business Management (Magna Cum Laude) and also a certificate of proficiency in Bookkeeping. Took additional classes in Sound Design.
-						</p>
-						<a href="http://www.tjc.edu" target="_blank">www.tjc.edu</a>
-					</div>
-				</div>
-
-				<div class="button-links">
-					<a href="./matthew_curtis_resume.pdf" target="_blank">Download PDF Resume</a>
-				</div>
-			</div>
-			<!-- End grid -->
-
-		</div>
-	</section>
-
-	<!--===============-->
-	<!--===============-->
-	<!-- Contact Slide -->
-	<!--===============-->
-	<!--===============-->
-	<section id="contact">
-		<div class="slide-container">
-			<h2>Contact</h2>
-
-			<!-- Start grid -->
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-6">
-						<p>
-							<strong>Matthew Curtis</strong>
-							<br> Austin, TX
-						</p>
-						<p>
-							<a href="mailto:matthew@matthewbryancurtis.com">matthew@matthewbryancurtis.com</a>
-						</p>
-						<div class="button-links">
-							<a href="https://github.com/matthewbryancurtis" target="_blank">GitHub</a>
-							<a href="https://www.linkedin.com/in/matthewbryancurtis" target="_blank">LinkedIn</a>
-							<!-- <a href="http://blog.matthewbryancurtis.com/" target="_blank">Blog</a> -->
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<p class="hide-mobile">Thanks for stopping by - please feel free to say hello! I'm currently looking for opportunities to code for a creative company and to expand my technological horizons. I'm also always game to meet people who make, run, or do interesting things.</p>
-					</div>
-				</div>
-			</div>
-			<!-- End grid -->
-
-		</div>
-	</section>
-
-	<!-- Load jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-	<!-- Load Bootstrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-	<!-- Load Custom JS -->
-	<script src="scripts/main.js"></script>
-
-	<!-- Hexagon Splash -->
-	<script src="scripts/Reverb.js"></script>
-	<script src="scripts/Bell.js"></script>
-	<script src="scripts/Hexagon.js"></script>
-	<script src="scripts/Canvas.js"></script>
-
-	<!-- Triangle Splash -->
-	<!-- <script src="scripts/Triangle.js"></script> -->
-
-	<script>
-		//Show page when loaded to block FOUC
-		$body.style.opacity = "1";
-	</script>
+      <section class="footer">
+        <p>&copy; 2019 Matthew Curtis</p>
+        <p>Icons by <a href="https://fontawesome.com/" target"_blank" rel="noopener">Font Awesome</a> and trees by <a href="https://www.vexels.com" target"_blank" rel="noopener">Vexels</a></p>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>

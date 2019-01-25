@@ -1,0 +1,16 @@
+// https://colorhunt.co/palette/107677
+$white: #FFF;
+$black: #000;
+
+$sky-top: #E7E7DE;
+$sky-bottom: #E7E7DE;
+$sun: $white;
+$forest: darken(#008891, 10%);
+$forest-mid: desaturate(lighten($forest, 13%), 40%);
+$forest-back: desaturate(lighten($forest, 25%), 50%);
+
+$intro: lighten($forest, 3%);
+$expo: #C3C39F;
+
+$ocean-top: lighten(mix($forest, #00587A, 80%), 12);
+$ocean-bottom: #0F3057;
