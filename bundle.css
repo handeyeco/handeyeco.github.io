@@ -57,17 +57,25 @@ body, html {
   background: linear-gradient(#E7E7DE, #E7E7DE);
 }
 
+em {
+  font-family: "Great Vibes", cursive;
+}
+
+a {
+  color: #fcfcfc;
+}
+
 @keyframes slide-left {
   from {
     right: -99rem;
   }
   to {
-    right: 2rem;
+    right: 2em;
   }
 }
 @keyframes slide-right {
   from {
-    right: 2rem;
+    right: 2em;
   }
   to {
     right: -99rem;
@@ -146,59 +154,45 @@ body, html {
   position: relative;
 }
 
-.parallax-slide-1 {
-  transform: translateZ(-1px) scale(2);
+.parallax-slide {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.parallax-slide-1 > svg {
-  fill: #207a80;
+.parallax-slide > svg {
   position: absolute;
   bottom: 0;
+}
+
+.parallax-slide-1 {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+.parallax-slide-1 > svg {
+  fill: #207a80;
 }
 
 .parallax-slide-2 {
   transform: translateZ(-2px) scale(3);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: -2;
 }
 .parallax-slide-2 > svg {
   fill: #379fa6;
-  position: absolute;
-  bottom: 0;
 }
 
 .parallax-slide-3 {
   transform: translateZ(0.25px) scale(0.75);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: -3;
 }
 .parallax-slide-3 > svg {
   fill: #fcfcfc;
-  position: absolute;
-  bottom: 0;
 }
 
 .content-container {
   position: absolute;
   top: 0;
-}
-
-em {
-  font-family: "Great Vibes", cursive;
-}
-
-a {
-  color: #fcfcfc;
 }
 
 .slide {
