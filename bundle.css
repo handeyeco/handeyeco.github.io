@@ -57,8 +57,8 @@ body, html {
   background: linear-gradient(#E7E7DE, #E7E7DE);
 }
 
-em {
-  font-family: "Great Vibes", cursive;
+body {
+  font-size: 1.2rem;
 }
 
 a {
@@ -86,6 +86,7 @@ a {
 }
 
 .notification__container {
+  font-size: 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -132,67 +133,38 @@ a {
   animation: slide-right 1s ease forwards;
 }
 
-.container {
-  font-size: 1.2rem;
-  perspective: 1px;
-  overflow-x: hidden;
-}
-
 .hero {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.treeline--front {
-  position: absolute;
-  bottom: 0;
-  fill: #00585e;
-}
-
-.parallax-container {
-  height: 100vh;
-  position: relative;
-}
-
-.parallax-slide {
+.parallax__slide {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.parallax-slide > svg {
+.parallax__slide > svg {
   position: absolute;
   bottom: 0;
 }
 
-.parallax-slide-1 {
-  transform: translateZ(-1px) scale(2);
-  z-index: -1;
+.parallax__slide--0 > svg {
+  fill: #00585e;
 }
-.parallax-slide-1 > svg {
+
+.parallax__slide--1 > svg {
   fill: #207a80;
 }
 
-.parallax-slide-2 {
-  transform: translateZ(-2px) scale(3);
-  z-index: -2;
-}
-.parallax-slide-2 > svg {
+.parallax__slide--2 > svg {
   fill: #379fa6;
 }
 
-.parallax-slide-3 {
-  transform: translateZ(0.25px) scale(0.75);
-  z-index: -3;
-}
-.parallax-slide-3 > svg {
+.parallax__slide--3 > svg {
   fill: #fcfcfc;
-}
-
-.content-container {
-  position: absolute;
-  top: 0;
 }
 
 .slide {
@@ -206,7 +178,7 @@ a {
 .slide > p {
   font-size: 1em;
   margin-top: 1em;
-  line-height: 1.25em;
+  line-height: 1.75em;
   opacity: 0.8;
 }
 
@@ -284,8 +256,8 @@ a {
 }
 
 .resume__date {
-  font-family: "Great Vibes", cursive;
   opacity: 0.5;
+  margin-bottom: 0.5rem;
 }
 
 .resume__rule {
@@ -330,14 +302,10 @@ a {
   margin: 0 1rem;
 }
 .social-icons svg {
-  opacity: 0.5;
   height: 2rem;
   fill: #fcfcfc;
   cursor: pointer;
   transition: all 0.2s;
-}
-.social-icons svg:hover {
-  opacity: 1;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -356,7 +324,7 @@ a {
 }
 
 @media (min-width: 800px) {
-  .container {
+  .slide, .mobile-card {
     font-size: 1.5rem;
   }
 }
@@ -369,11 +337,8 @@ a {
     display: none;
   }
 
-  .container {
-    font-size: 2rem;
-  }
-
   .slide {
+    font-size: 2rem;
     padding: 20vh 20vw;
   }
 
@@ -388,6 +353,7 @@ a {
 
   .resume__date {
     opacity: 1;
+    margin-bottom: 0;
   }
 
   .resume__rule {
