@@ -212,7 +212,7 @@ a {
 
 .angle {
   height: 10vh;
-  background: #C3C39F;
+  background: #BBB;
 }
 
 .angle > svg {
@@ -224,7 +224,7 @@ a {
 
 .expo {
   position: relative;
-  background: #C3C39F;
+  background: #BBB;
   color: #000;
 }
 
